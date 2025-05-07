@@ -11,15 +11,15 @@ document.addEventListener('DOMContentLoaded', () => {
       return response.json();
     })
     .then((posts) => {
-      postsList.innerHTML = '';
+      galleryList.innerHTML = ''; // Fix variable name
       posts.forEach((img) => {
         const listItem = document.createElement('div');
         listItem.innerHTML = `<a href="${img.link}">${img.title.rendered}</a>`;
-        postsList.appendChild(listItem);
+        galleryList.appendChild(listItem); // Fix variable name
       });
     })
     .catch((error) => {
-      postsList.innerHTML = '<li>Error loading gallery.</li>';
+      galleryList.innerHTML = '<div>Error loading gallery.</div>'; // Fix variable name
       console.error(error);
     });
   });

@@ -194,8 +194,42 @@ return array(
 		'editorScript' => 'file:./index.js',
 		'editorStyle' => 'file:./index.css',
 		'style' => 'file:./style-index.css',
-		'render' => 'file:./render.php',
-		'viewScript' => 'file:./view.js'
+		'render' => 'file:./render.php'
+	),
+	'myarchive' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'adi26r/myarchive',
+		'version' => '0.1.0',
+		'title' => 'My Archive by Adi',
+		'category' => 'widgets',
+		'icon' => 'admin-post',
+		'description' => 'Default post archive display with custom title and description.',
+		'example' => array(
+			
+		),
+		'supports' => array(
+			'align' => array(
+				'wide',
+				'full'
+			),
+			'html' => false
+		),
+		'attributes' => array(
+			'sectionTitle' => array(
+				'type' => 'string',
+				'default' => 'Archive Title'
+			),
+			'sectionDescription' => array(
+				'type' => 'string',
+				'default' => 'Archive Description'
+			)
+		),
+		'textdomain' => 'myarchive',
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./index.css',
+		'style' => 'file:./style-index.css',
+		'render' => 'file:./render.php'
 	),
 	'myfooter' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
@@ -298,8 +332,32 @@ return array(
 		'editorScript' => 'file:./index.js',
 		'editorStyle' => 'file:./index.css',
 		'style' => 'file:./style-index.css',
-		'render' => 'file:./render.php',
-		'viewScript' => 'file:./view.js'
+		'render' => 'file:./render.php'
+	),
+	'mysingle' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'adi26r/mysingle',
+		'version' => '0.1.0',
+		'title' => 'My Single by Adi',
+		'category' => 'widgets',
+		'icon' => 'smiley',
+		'description' => 'Simple single post component.',
+		'example' => array(
+			
+		),
+		'supports' => array(
+			'html' => false,
+			'align' => array(
+				'wide',
+				'full'
+			)
+		),
+		'textdomain' => 'mysingle',
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./index.css',
+		'style' => 'file:./style-index.css',
+		'render' => 'file:./render.php'
 	),
 	'wraperglass' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',

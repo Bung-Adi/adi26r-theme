@@ -1,17 +1,21 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "adi26r/mypage",
+  "name": "adi26r/mysingle",
   "version": "0.1.0",
-  "title": "My Page",
+  "title": "My Single by Adi",
   "category": "widgets",
   "icon": "smiley",
-  "description": "Simple page component.",
+  "description": "Simple single post component.",
   "example": {},
   "supports": {
-    "html": false
+    "html": false,
+    "align": [
+      "wide",
+      "full"
+    ]
   },
-  "textdomain": "mypage",
+  "textdomain": "mysingle",
   "editorScript": "file:./index.js",
   "editorStyle": "file:./index.css",
   "style": "file:./style-index.css",

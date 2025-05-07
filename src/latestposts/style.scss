@@ -17,7 +17,15 @@
 		list-style: none;
 		margin: 0;
 		padding: 0;
+		@include breakpoint-up(medium){
+			display: flex;
+			flex-wrap: wrap;
+			gap: 32px;
+		}
 		> li {
+			@include breakpoint-up(medium){
+				flex: 1 1 calc(25% - 32px);
+			}
 			a {
 				text-decoration: none;
 				width: 100%;
@@ -30,6 +38,28 @@
 				> img {
 					border-radius: $border-radius;
 				}
+				> div {
+					width: auto;
+					height: 150px;
+					@include breakpoint-up(medium){
+						height: 300px;
+					}
+					> img {
+						width: auto;
+						height: 100%;
+					}
+				}
+			}
+		}
+	}
+	.read-more {
+		text-align: center;
+		.read-more-button {
+			text-decoration: none;
+			> button {
+				@include glassmorph-w;
+				width: auto;
+				height: 48px;
 			}
 		}
 	}

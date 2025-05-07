@@ -1,21 +1,22 @@
 import { __ } from '@wordpress/i18n';
 import { useBlockProps, InspectorControls } from '@wordpress/block-editor';
 import { PanelBody, SelectControl, TextControl } from '@wordpress/components';
-import { useSelect } from '@wordpress/data';
+import { useEffect, useState } from '@wordpress/element';
 
 export default function Edit({ attributes, setAttributes }) {
 	const { postType, sectionTitle, sectionDescription } = attributes;
+	const [postTypeOptions, setPostTypeOptions] = useState([]);
 
-	const postTypes = useSelect((select) =>
-		select('core').getPostTypes({ per_page: -1 })
-	);
-
-	const postTypeOptions = postTypes
-		? postTypes.map((type) => ({
-				label: type.labels.name, // Use the rebranded name
+	useEffect(() => {
+		// Fetch post types dynamically
+		wp.apiFetch({ path: '/wp/v2/types' }).then((types) => {
+			const options = Object.values(types).map((type) => ({
+				label: type.name,
 				value: type.slug,
-		  }))
-		: [];
+			}));
+			setPostTypeOptions(options);
+		});
+	}, []);
 
 	return (
 		<div {...useBlockProps()}>
@@ -42,7 +43,7 @@ export default function Edit({ attributes, setAttributes }) {
 			<div>
 				<h2>{sectionTitle}</h2>
 				<p>{sectionDescription}</p>
-				<div className='our-placeholder-block'>
+				<div className="our-placeholder-block">
 					{__('Select a post type to display its latest posts.', 'adi26r')}
 				</div>
 			</div>

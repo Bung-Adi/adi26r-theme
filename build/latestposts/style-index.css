@@ -38,6 +38,18 @@ body {
   margin: 0;
   padding: 0;
 }
+@media (min-width: 992px) {
+  .adi26r-latest-posts .posts-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+}
+@media (min-width: 992px) {
+  .adi26r-latest-posts .posts-list > li {
+    flex: 1 1 calc(25% - 32px);
+  }
+}
 .adi26r-latest-posts .posts-list > li a {
   text-decoration: none;
   width: 100%;
@@ -50,6 +62,34 @@ body {
 }
 .adi26r-latest-posts .posts-list > li a > img {
   border-radius: 8px;
+}
+.adi26r-latest-posts .posts-list > li a > div {
+  width: auto;
+  height: 150px;
+}
+@media (min-width: 992px) {
+  .adi26r-latest-posts .posts-list > li a > div {
+    height: 300px;
+  }
+}
+.adi26r-latest-posts .posts-list > li a > div > img {
+  width: auto;
+  height: 100%;
+}
+.adi26r-latest-posts .read-more {
+  text-align: center;
+}
+.adi26r-latest-posts .read-more .read-more-button {
+  text-decoration: none;
+}
+.adi26r-latest-posts .read-more .read-more-button > button {
+  backdrop-filter: blur(13px) saturate(200%);
+  -webkit-backdrop-filter: blur(13px) saturate(200%);
+  background-color: rgba(231, 232, 233, 0.26);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  width: auto;
+  height: 48px;
 }
 
 /*# sourceMappingURL=style-index.css.map*/

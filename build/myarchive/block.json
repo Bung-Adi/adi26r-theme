@@ -1,32 +1,31 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "adi26r/latestposts",
+  "name": "adi26r/myarchive",
   "version": "0.1.0",
-  "title": "Latest posts by Adi",
+  "title": "My Archive by Adi",
   "category": "widgets",
   "icon": "admin-post",
-  "description": "Display the latest posts from a selected post type.",
+  "description": "Default post archive display with custom title and description.",
   "example": {},
   "supports": {
-    "html": false,
-    "children": true
+    "align": [
+      "wide",
+      "full"
+    ],
+    "html": false
   },
   "attributes": {
-    "postType": {
-      "type": "string",
-      "default": "post"
-    },
     "sectionTitle": {
       "type": "string",
-      "default": "please type the title"
+      "default": "Archive Title"
     },
     "sectionDescription": {
       "type": "string",
-      "default": "please type the description"
+      "default": "Archive Description"
     }
   },
-  "textdomain": "latestposts",
+  "textdomain": "myarchive",
   "editorScript": "file:./index.js",
   "editorStyle": "file:./index.css",
   "style": "file:./style-index.css",
