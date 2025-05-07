@@ -231,6 +231,41 @@ return array(
 		'style' => 'file:./style-index.css',
 		'render' => 'file:./render.php'
 	),
+	'myarchiveconcept' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'adi26r/myarchiveconcept',
+		'version' => '0.1.0',
+		'title' => 'My Archive Concept by Adi',
+		'category' => 'widgets',
+		'icon' => 'admin-post',
+		'description' => 'Default custom concept post archive display with custom title and description.',
+		'example' => array(
+			
+		),
+		'supports' => array(
+			'align' => array(
+				'wide',
+				'full'
+			),
+			'html' => false
+		),
+		'attributes' => array(
+			'sectionTitle' => array(
+				'type' => 'string',
+				'default' => 'Archive Title'
+			),
+			'sectionDescription' => array(
+				'type' => 'string',
+				'default' => 'Archive Description'
+			)
+		),
+		'textdomain' => 'myarchiveconcept',
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./index.css',
+		'style' => 'file:./style-index.css',
+		'render' => 'file:./render.php'
+	),
 	'myfooter' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
@@ -354,6 +389,31 @@ return array(
 			)
 		),
 		'textdomain' => 'mysingle',
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./index.css',
+		'style' => 'file:./style-index.css',
+		'render' => 'file:./render.php'
+	),
+	'mysingleconcept' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'adi26r/mysingleconcept',
+		'version' => '0.1.0',
+		'title' => 'My Single Concept by Adi',
+		'category' => 'widgets',
+		'icon' => 'smiley',
+		'description' => 'Simple single post component for concept post.',
+		'example' => array(
+			
+		),
+		'supports' => array(
+			'html' => false,
+			'align' => array(
+				'wide',
+				'full'
+			)
+		),
+		'textdomain' => 'mysingleconcept',
 		'editorScript' => 'file:./index.js',
 		'editorStyle' => 'file:./index.css',
 		'style' => 'file:./style-index.css',

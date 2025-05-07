@@ -28,6 +28,7 @@ $query = new WP_Query($args);
                                 <img src="<?php echo esc_url(get_template_directory_uri() . '/img/a26r-square-medium.jpg'); ?>" alt="<?php esc_attr_e('Default Thumbnail', 'adi26r'); ?>">
                             </div>
                         <?php endif; ?>
+                        <p class="post-date"><?php echo get_the_date(); ?></p>
                         <h4 class="post-title"><?php the_title(); ?></h4>
                     </a>
                 </li>
