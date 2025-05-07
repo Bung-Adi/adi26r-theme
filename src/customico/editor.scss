@@ -1,0 +1,87 @@
+@import '../assets/variables';
+
+/**
+ * Editor styles for the Icon Link Block
+ */
+
+ .adi26r-customico-block-editor{
+  padding: 16px;
+  border: 1px dashed $color-y;
+  border-radius: 4px;
+  // Alignment
+  &.align-start {
+    display: flex;
+    justify-content: flex-start;
+  }
+  &.align-center {
+    display: flex;
+    justify-content: center;
+  }
+  &.align-end {
+    display: flex;
+    justify-content: flex-end;
+  }
+  // Layout types
+  &.vertical {
+    .icon-link-container {
+      flex-direction: column;
+      align-items: center;
+      .icon-link-text {
+        margin-top: 8px;
+      }
+    }
+  }
+  &.horizontal {
+    .icon-link-container {
+      flex-direction: row;
+      align-items: center;
+      .icon-link-image,
+      .icon-placeholder {
+        margin-right: 12px;
+      }
+    }
+  }
+  .icon-link-container {
+    display: flex;
+    transition: all 0.2s ease;
+  }
+  .icon-placeholder {
+    cursor: pointer;
+    background-color: $color-y;
+    border: 1px dashed #999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    font-size: 11px;
+    text-align: center;
+    user-select: none;
+    &:hover {
+      background-color: $color-y;
+    }
+  }
+  .icon-link-image {
+    object-fit: contain;
+  }
+  .icon-link-text {
+    min-width: 50px;
+    min-height: 20px;
+  }
+  .icon-link-notice {
+    color: #999;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 8px;
+    font-style: italic;
+    width: 100%;
+  }
+}
+
+// Make sure the URL input has proper styling
+.components-panel {
+  .block-editor-url-input {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 8px;
+  }
+}

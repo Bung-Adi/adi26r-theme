@@ -1,0 +1,17 @@
+@import '../assets/variables';
+
+.section-hero-block {
+  position: relative;
+  .adi26r-site-ilus {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 400px;
+    height: 600px;
+    z-index: -1;
+    > img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

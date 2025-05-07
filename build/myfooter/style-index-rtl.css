@@ -1,0 +1,57 @@
+/*!************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/myfooter/style.scss ***!
+  \************************************************************************************************************************************************************************************************************************************************/
+body {
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+  background-color: #2A2D32;
+  color: #E7E8E9;
+  font-family: "Play", sans-serif;
+}
+
+.our-placeholder-block {
+  padding: 20px;
+  text-align: center;
+  font-size: 1.65rem;
+  background: linear-gradient(-180deg, #dedede, #adadad);
+}
+
+.adi26r-footer {
+  backdrop-filter: blur(13px) saturate(200%);
+  -webkit-backdrop-filter: blur(13px) saturate(200%);
+  background-color: rgba(231, 232, 233, 0.26);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  color: #E7E8E9;
+  min-height: 148px;
+  padding: 0 5vw 57px 5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 32px;
+}
+@media (min-width: 992px) {
+  .adi26r-footer {
+    padding: 0 5vw 0 5vw;
+  }
+}
+.adi26r-footer > ul {
+  display: flex;
+  gap: 16px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.adi26r-footer > ul > li > a {
+  font-size: 20px;
+  color: #E7E8E9;
+  text-decoration: none;
+}
+.adi26r-footer .credit {
+  font-size: 12px;
+}

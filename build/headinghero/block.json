@@ -1,0 +1,29 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "adi26r/headinghero",
+  "version": "0.1.0",
+  "title": "My Hero Heading",
+  "category": "text",
+  "icon": "heading",
+  "description": "adi26r custom heading with selectable heading level",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "text": {
+      "type": "string",
+      "source": "html",
+      "selector": ".headline",
+      "default": "Your Heading Here"
+    },
+    "headingLevel": {
+      "type": "string",
+      "default": "h1"
+    }
+  },
+  "textdomain": "headinghero",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

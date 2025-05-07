@@ -1,0 +1,36 @@
+@import '../assets/variables';
+
+.adi26r-latest-posts {
+	.title {
+		font-size: $font-lg;
+		color: $color-y;
+		margin-bottom: 8px;
+	}
+	.description {
+		@include glassmorph-w;
+		font-size: $font-sm;
+		color: $color-y;
+		padding: 8px;
+		margin-top: 0;
+	}
+	.posts-list {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		> li {
+			a {
+				text-decoration: none;
+				width: 100%;
+				display: flex;
+				padding: 8px 0;
+				gap: 16px;
+				flex-direction: row;
+				align-items: center;
+				color: $color-y;
+				> img {
+					border-radius: $border-radius;
+				}
+			}
+		}
+	}
+}

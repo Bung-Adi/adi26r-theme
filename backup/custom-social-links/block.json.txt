@@ -1,0 +1,21 @@
+{
+  "apiVersion": 2,
+  "name": "adi26r/custom-social-links",
+  "title": "Custom Social Links",
+  "category": "widgets",
+  "icon": "share",
+  "parent": [],
+  "attributes": {
+    "enableCustomStyle": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "supports": {
+    "html": false,
+    "children": true
+  },
+  "editorScript": "file:./index.js",
+  "style": "file:./style-index.css",
+  "renderCallback": "adi26r_render_custom_social_links_block"
+}

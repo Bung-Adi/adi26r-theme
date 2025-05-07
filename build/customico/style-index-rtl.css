@@ -1,0 +1,97 @@
+/*!*************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/customico/style.scss ***!
+  \*************************************************************************************************************************************************************************************************************************************************/
+body {
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+  background-color: #2A2D32;
+  color: #E7E8E9;
+  font-family: "Play", sans-serif;
+}
+
+.our-placeholder-block {
+  padding: 20px;
+  text-align: center;
+  font-size: 1.65rem;
+  background: linear-gradient(-180deg, #dedede, #adadad);
+}
+
+/**
+ * Frontend styles for the Icon Link Block
+ */
+.adi26r-customico-block {
+  margin: 1.5em 0;
+}
+.adi26r-customico-block.align-start {
+  display: flex;
+  justify-content: flex-start;
+}
+.adi26r-customico-block.align-center {
+  display: flex;
+  justify-content: center;
+}
+.adi26r-customico-block.align-end {
+  display: flex;
+  justify-content: flex-end;
+}
+.adi26r-customico-block.vertical .icon-link-wrapper {
+  flex-direction: column;
+  align-items: center;
+}
+.adi26r-customico-block.vertical .icon-link-wrapper .icon-link-text {
+  margin-top: 8px;
+}
+.adi26r-customico-block.horizontal .icon-link-wrapper {
+  flex-direction: row;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .adi26r-customico-block.horizontal .icon-link-wrapper {
+    flex-direction: column;
+  }
+}
+.adi26r-customico-block.horizontal .icon-link-wrapper .icon-link-image {
+  margin-left: 12px;
+}
+@media (min-width: 768px) {
+  .adi26r-customico-block.horizontal .icon-link-wrapper .icon-link-image {
+    margin-left: 0;
+    margin-bottom: 8px;
+  }
+}
+.adi26r-customico-block .icon-link-wrapper {
+  display: inline-flex;
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.2s ease;
+}
+.adi26r-customico-block .icon-link-wrapper:hover {
+  opacity: 0.85;
+}
+.adi26r-customico-block .icon-link-wrapper:hover .icon-link-image {
+  transform: scale(1.05);
+}
+.adi26r-customico-block .icon-link-image {
+  display: block;
+  -o-object-fit: contain;
+     object-fit: contain;
+  transition: transform 0.2s ease;
+}
+.adi26r-customico-block .icon-link-text {
+  color: inherit;
+  line-height: 1.4;
+  font-size: 12px;
+  text-align: center;
+  width: 100%;
+  max-width: var(--image-size, 64px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media (min-width: 992px) {
+  .adi26r-customico-block .icon-link-text {
+    max-width: -moz-max-content;
+    max-width: max-content;
+    font-size: 14px;
+  }
+}

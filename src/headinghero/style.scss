@@ -1,0 +1,41 @@
+@import '../assets/variables';
+
+.headline {
+  margin-bottom: 1rem;
+  font-weight: 700;
+  line-height: 1.2;
+  transition: all 0.3s ease;
+  width: 50%;
+  
+  &--h1 {
+    font-size: $font-xl;
+    letter-spacing: -0.02em;
+  }
+  
+  &--h2 {
+    font-size: $font-lg;
+    letter-spacing: -0.01em;
+  }
+  
+  &--h3 {
+    font-size: $font-md;
+  }
+
+  &.is-style-underlined {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: #3858e9;
+    text-underline-offset: 4px;
+    &:after {
+      display: none;
+    }
+  }
+  
+  &.is-style-centered {
+    text-align: center;
+    &:after {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}

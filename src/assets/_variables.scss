@@ -1,0 +1,56 @@
+$color-x: #2A2D32;
+$color-y: #E7E8E9;
+$color-link: #03C4F3;
+
+$font-xs: 12px;
+$font-sm: 14px;
+$font-md: 20px;
+$font-lg: 26px;
+$font-xl: 32px;
+
+$border-radius: 8px;
+
+$transition-speed: 0.3s;
+
+// Body reset
+body {
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+  background-color: $color-x;
+  color: $color-y;
+  font-family: 'Play', sans-serif;
+}
+
+// Breakpoint
+$breakpoints-up: ("small": "768px", "medium": "992px", "large": "1200px", "xlarge": "1440px");
+
+@mixin breakpoint-up($size){
+  @media (min-width: map-get($breakpoints-up, $size)){
+    @content;
+  }
+}
+
+// Mixins
+@mixin glassmorph-w {
+  backdrop-filter: blur(13px) saturate(200%);
+  -webkit-backdrop-filter: blur(13px) saturate(200%);
+  background-color: rgba(231, 232, 233, 0.26);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+@mixin shadow-w-down {
+  box-shadow: 0px 4px 4px rgba(250, 250, 250, 0.25);
+}
+
+@mixin shadow-w-up {
+  box-shadow: 0px -4px 4px rgba(250, 250, 250, 0.25);
+}
+
+.our-placeholder-block {
+  padding: 20px;
+  text-align: center;
+  font-size: 1.65rem;
+  background: linear-gradient(180deg, #dedede, #adadad);
+}

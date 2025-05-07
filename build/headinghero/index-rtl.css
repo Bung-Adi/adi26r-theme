@@ -1,0 +1,70 @@
+/*!****************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/headinghero/editor.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************************/
+body {
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+  background-color: #2A2D32;
+  color: #E7E8E9;
+  font-family: "Play", sans-serif;
+}
+
+.our-placeholder-block {
+  padding: 20px;
+  text-align: center;
+  font-size: 1.65rem;
+  background: linear-gradient(-180deg, #dedede, #adadad);
+}
+
+.headline {
+  margin-bottom: 1rem;
+  font-weight: 700;
+  line-height: 1.2;
+  transition: all 0.3s ease;
+  width: 50%;
+}
+.headline--h1 {
+  font-size: 32px;
+  letter-spacing: -0.02em;
+}
+.headline--h2 {
+  font-size: 26px;
+  letter-spacing: -0.01em;
+}
+.headline--h3 {
+  font-size: 20px;
+}
+.headline.is-style-underlined {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-color: #3858e9;
+  text-underline-offset: 4px;
+}
+.headline.is-style-underlined:after {
+  display: none;
+}
+.headline.is-style-centered {
+  text-align: center;
+}
+.headline.is-style-centered:after {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.wp-block-your-namespace-heading-block {
+  padding: 1rem;
+  border: 1px dashed transparent;
+}
+.wp-block-your-namespace-heading-block.is-selected {
+  border-color: #ddd;
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.headline ::-moz-selection {
+  background-color: rgba(56, 88, 233, 0.2);
+}
+
+.headline ::selection {
+  background-color: rgba(56, 88, 233, 0.2);
+}

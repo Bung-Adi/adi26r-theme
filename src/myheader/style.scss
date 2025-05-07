@@ -1,0 +1,212 @@
+@import '../assets/variables';
+
+.adi26r-mnav {
+  @include glassmorph-w;
+	position: fixed; 
+	left:0;
+	top:0;
+	z-index: 20; 
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transform: translateX(0);
+	transition: transform 0.3s ease;
+	&.close {
+		transform: translateX(-100%);
+	}
+  @include breakpoint-up(medium) {
+    height: auto;
+    max-height: 58px;
+    transform: none;
+    &.close {
+      transform: none; // No sliding effect needed on desktop
+    }
+  }
+	.panel {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+    flex-direction: column;
+    gap: 32px;
+    width: 100%;
+    @include breakpoint-up(medium) {
+      max-height: 58px;
+      padding: 0 5%;
+      flex-direction: row;
+    }
+    .logo {
+      height: 58px;
+      width: 230px;
+      > a {
+        text-decoration: none;
+        > img {
+          width: 100%;
+          height: auto;
+        }
+      }
+      @include breakpoint-up(medium) {
+        align-content: center;
+      }
+    }
+		.links {
+			text-align: center;
+			font-size: $font-md;
+			line-height: 25px;
+      @include breakpoint-up(medium) {
+        text-align: right;
+        font-size: $font-md;
+      }
+			> ul {
+				display: flex;
+				flex-direction: column;
+        list-style: none;
+        gap: 8px;
+        padding: 0;
+        margin: 0;
+        @include breakpoint-up(medium) {
+          flex-direction: row;
+          padding: 0;
+          align-items: center;
+        }
+        > li {
+          position: relative;
+          @include breakpoint-up(medium) {
+            &:hover > ul {
+              display: block;
+            }
+          }
+          > a {
+            color: $color-y;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            display: inline-block;
+            transition: color $transition-speed ease;
+            &:hover {
+              color: $color-y;
+            }
+          }
+          // Dropdown menus
+          > ul {
+            display: none;
+            list-style: none;
+            padding: 0.5rem 0;
+            margin: 0.5rem 0;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            &.active {
+              display: block;
+            }
+            @include breakpoint-up(medium) {
+              position: absolute;
+              top: 100%;
+              left: 0;
+              min-width: 200px;
+              background-color: $color-x;
+              box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+              border-radius: 0 0 4px 4px;
+              padding: 0.5rem 0;
+              z-index: 21;
+              &::before {
+                content: '';
+                position: absolute;
+                top: -10px;
+                left: 20px;
+                width: 0;
+                height: 0;
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+                border-bottom: 10px solid $color-x;
+              }
+            }
+            li {
+              margin: 0.5rem 0;
+              @include breakpoint-up(medium) {
+                margin: 0;
+                text-align: left;
+              }
+              a {
+                color: rgba(255, 255, 255, 0.8);
+                text-decoration: none;
+                display: block;
+                padding: 0.5rem 1rem;
+                font-size: 0.9em;
+                transition: background-color $transition-speed ease;
+                &:hover {
+                  background-color: rgba(255, 255, 255, 0.1);
+                  color: $color-y;
+                }
+              }
+            }
+          }
+        }
+			}
+		}
+	}
+}
+
+.adi26r-mnav-button {
+	position: fixed;
+	bottom: 8px;
+	z-index: 30; 
+	width: 100%;
+	display: flex; 
+	justify-content: center;
+  @include breakpoint-up(medium){
+    display: none;
+  }
+	.burger{
+		border-radius: $border-radius;
+		@include glassmorph-w;
+		.text {
+			margin: 0;
+			position: relative;
+		};
+		.line{
+			display: inline-block;
+			width: 50px;
+			height: 10px;
+			background: $color-x;
+			position: relative;
+			border-radius: $border-radius;
+			transition: all 0.5s ease-in-out;
+		}
+		&.open{
+			.text {
+				color: transparent;
+			}
+			.line-a {
+				transform-origin: 0% 100% ;
+				transform: rotate(45deg);
+				left: 4px;
+				top: -3px;
+			}
+			.line-b {
+				transform-origin: 20% 50%;
+				transform: rotate(-45deg);
+				left: 4px;
+				top: -3px;
+			}
+		}
+	}
+}
+
+.adi26r-main {
+  max-width: 1440px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 16px 5vw 0 5vw;
+  overflow: hidden;
+  color: $color-y;
+  @include breakpoint-up(medium){
+    padding: 64px 5vw 0 5vw;
+  }
+  > *:first-child {
+    padding-bottom: 32px;
+  }
+  > *:not(:first-child) {
+    padding: 32px 0;
+  }
+}

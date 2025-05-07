@@ -1,0 +1,45 @@
+import { registerBlockType } from '@wordpress/blocks';
+import { InspectorControls } from '@wordpress/block-editor';
+import { PanelBody, ToggleControl } from '@wordpress/components';
+
+registerBlockType('adi26r/custom-social-links', {
+    title: 'Custom Social Links',
+    icon: 'share',
+    category: 'widgets',
+    attributes: {
+        enableCustomStyle: {
+            type: 'boolean',
+            default: false,
+        },
+    },
+    edit: ({ attributes, setAttributes }) => {
+        const { enableCustomStyle } = attributes;
+
+        return (
+            <>
+                <InspectorControls>
+                    <PanelBody title="Custom Style Settings">
+                        <ToggleControl
+                            label="Enable Custom Style"
+                            checked={enableCustomStyle}
+                            onChange={(value) => setAttributes({ enableCustomStyle: value })}
+                        />
+                    </PanelBody>
+                </InspectorControls>
+                <div className={`wp-block-social-links ${enableCustomStyle ? 'custom-style-enabled' : ''}`}>
+                    {/* Placeholder for social links */}
+                    <p>Social Links Placeholder</p>
+                </div>
+            </>
+        );
+    },
+    save: ({ attributes }) => {
+        const { enableCustomStyle } = attributes;
+        return (
+            <div className={`wp-block-social-links ${enableCustomStyle ? 'custom-style-enabled' : ''}`}>
+                {/* Placeholder for social links */}
+                <p>Social Links Placeholder</p>
+            </div>
+        );
+    },
+});

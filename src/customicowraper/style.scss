@@ -1,0 +1,25 @@
+@import '../assets/variables';
+
+.adi26r-customico-wraper {
+  @include glassmorph-w;
+  border-radius: $border-radius;
+  padding: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  .adi26r-customico-block {
+    flex: 1 1 calc(33.333% - 18px);
+    @include breakpoint-up(small){
+      flex: 1 1 calc(25% - 18px);
+    }
+    @include breakpoint-up(medium){
+      flex: 1 1 calc(20% - 18px);
+    }
+    > a {
+      > img {
+        border: 1px solid $color-y;
+        border-radius: $border-radius;
+      }
+    }
+  }
+}

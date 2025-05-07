@@ -1,0 +1,82 @@
+@import '../assets/variables';
+
+/**
+ * Frontend styles for the Icon Link Block
+ */
+
+ .adi26r-customico-block {
+  margin: 1.5em 0;
+  // Alignment
+  &.align-start {
+    display: flex;
+    justify-content: flex-start;
+  }
+  &.align-center {
+    display: flex;
+    justify-content: center;
+  }
+  &.align-end {
+    display: flex;
+    justify-content: flex-end;
+  }
+  // Layout types
+  &.vertical {
+    .icon-link-wrapper {
+      flex-direction: column;
+      align-items: center;
+      .icon-link-text {
+        margin-top: 8px;
+      }
+    }
+  }
+  &.horizontal {
+    .icon-link-wrapper {
+      flex-direction: row;
+      align-items: center;
+      @include breakpoint-up(small){
+        flex-direction: column; 
+      }
+      .icon-link-image {
+        margin-right: 12px;
+        @include breakpoint-up(small){
+          margin-right: 0;
+          margin-bottom: 8px;
+        }
+      }
+    }
+  }
+  // Link styles
+  .icon-link-wrapper {
+    display: inline-flex;
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.2s ease;
+    &:hover {
+      opacity: 0.85;
+      .icon-link-image {
+        transform: scale(1.05);
+      }
+    }
+  }
+  // Image styles
+  .icon-link-image {
+    display: block;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+  }
+  // Text styles
+  .icon-link-text {
+    color: inherit;
+    line-height: 1.4;
+    font-size: $font-xs;
+    text-align: center;
+    width: 100%;
+    max-width: var(--image-size, 64px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @include breakpoint-up(medium) {
+      max-width: max-content;
+      font-size: $font-sm;
+    }
+  }
+}

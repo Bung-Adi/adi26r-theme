@@ -1,0 +1,53 @@
+/*!***************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/latestposts/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************************/
+body {
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+  background-color: #2A2D32;
+  color: #E7E8E9;
+  font-family: "Play", sans-serif;
+}
+
+.our-placeholder-block {
+  padding: 20px;
+  text-align: center;
+  font-size: 1.65rem;
+  background: linear-gradient(-180deg, #dedede, #adadad);
+}
+
+.adi26r-latest-posts .title {
+  font-size: 26px;
+  color: #E7E8E9;
+  margin-bottom: 8px;
+}
+.adi26r-latest-posts .description {
+  backdrop-filter: blur(13px) saturate(200%);
+  -webkit-backdrop-filter: blur(13px) saturate(200%);
+  background-color: rgba(231, 232, 233, 0.26);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  font-size: 14px;
+  color: #E7E8E9;
+  padding: 8px;
+  margin-top: 0;
+}
+.adi26r-latest-posts .posts-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.adi26r-latest-posts .posts-list > li a {
+  text-decoration: none;
+  width: 100%;
+  display: flex;
+  padding: 8px 0;
+  gap: 16px;
+  flex-direction: row;
+  align-items: center;
+  color: #E7E8E9;
+}
+.adi26r-latest-posts .posts-list > li a > img {
+  border-radius: 8px;
+}

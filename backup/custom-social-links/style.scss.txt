@@ -1,0 +1,7 @@
+@import '../assets/variables';
+
+.wp-block-social-links.custom-style-enabled {
+  @include glassmorph-w;
+  border-radius: $border-radius;
+  padding: 8px;
+}

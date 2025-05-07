@@ -1,0 +1,18 @@
+@import './style.scss';
+
+.wp-block-your-namespace-heading-block {
+  padding: 1rem;
+  border: 1px dashed transparent;
+  
+  &.is-selected {
+    border-color: #ddd;
+    background-color: rgba(0, 0, 0, 0.02);
+  }
+}
+
+.headline {
+  ::selection {
+    background-color: rgba(56, 88, 233, 0.2);
+  }
+}
+

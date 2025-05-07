@@ -1,0 +1,11 @@
+@import '../assets/variables';
+
+.adi26r-latest-gallery-widget {
+  .title {
+    font-size: $font-md;
+  }
+  .description {
+    font-size: $font-sm;
+    @include glassmorph-w;
+  }
+}

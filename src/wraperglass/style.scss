@@ -1,0 +1,13 @@
+@import '../assets/variables';
+
+.glassmorphism-wraper {
+  @include glassmorph-w;
+  border-radius: $border-radius;
+  padding: 8px;
+  .wp-block-social-links {
+    margin: 0;
+    .wp-block-social-link {
+      border-radius: $border-radius;
+    }
+  }
+}
