@@ -1,0 +1,78 @@
+/*!*********************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/myads/style.scss ***!
+  \*********************************************************************************************************************************************************************************************************************************************/
+body {
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+  background-color: #2A2D32;
+  color: #E7E8E9;
+  font-family: "Play", sans-serif;
+}
+
+.our-placeholder-block {
+  padding: 20px;
+  text-align: center;
+  font-size: 1.65rem;
+  background: linear-gradient(-180deg, #dedede, #adadad);
+}
+
+.read-more {
+  text-align: center;
+  margin: 20px;
+}
+.read-more .read-more-button {
+  text-decoration: none;
+  backdrop-filter: blur(13px) saturate(200%);
+  -webkit-backdrop-filter: blur(13px) saturate(200%);
+  background-color: rgba(231, 232, 233, 0.26);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  padding: 16px;
+  color: #14e8ff;
+}
+
+/**
+ * Frontend styles for the Icon Link Block
+ */
+.adi26r-adsimage-block {
+  margin: 1.5em 0;
+}
+.adi26r-adsimage-block.align-start {
+  display: flex;
+  justify-content: flex-start;
+}
+.adi26r-adsimage-block.align-center {
+  display: flex;
+  justify-content: center;
+}
+.adi26r-adsimage-block.align-end {
+  display: flex;
+  justify-content: flex-end;
+}
+.adi26r-adsimage-block.vertical-banner {
+  max-width: 200px;
+  height: auto;
+}
+.adi26r-adsimage-block.horizontal-banner {
+  max-width: 600px;
+  height: 60px;
+}
+.adi26r-adsimage-block .ads-link-wrapper {
+  display: inline-flex;
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.2s ease;
+}
+.adi26r-adsimage-block .ads-link-wrapper:hover {
+  opacity: 0.85;
+}
+.adi26r-adsimage-block .ads-link-wrapper:hover .icon-link-image {
+  transform: scale(1.05);
+}
+.adi26r-adsimage-block .ads-link-image {
+  display: block;
+  -o-object-fit: contain;
+     object-fit: contain;
+  transition: transform 0.2s ease;
+}

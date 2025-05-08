@@ -40,7 +40,7 @@ $query = new WP_Query($args);
     </ul>
     <div class="read-more">
         <a href="<?php echo get_post_type_archive_link($postType); ?>" class="read-more-button">
-            <button><?php esc_html_e('Read More', 'adi26r'); ?></button>
+            <?php esc_html_e('Read More', 'adi26r'); ?>
         </a>
     </div>
 </section>

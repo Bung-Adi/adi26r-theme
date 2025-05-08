@@ -52,15 +52,4 @@
 			}
 		}
 	}
-	.read-more {
-		text-align: center;
-		.read-more-button {
-			text-decoration: none;
-			> button {
-				@include glassmorph-w;
-				width: auto;
-				height: 48px;
-			}
-		}
-	}
 }

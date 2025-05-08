@@ -22,6 +22,7 @@ function adi26r_theme_suport() {
   add_theme_support( 'responsive-embeds' );
   add_theme_support( 'post-thumbnails' );
   add_theme_support( 'gutenberg' );
+  add_theme_support( 'comments' );
   register_nav_menus(array(
   'nav-menu' => esc_html__('Nav Menu','adi26r'),
   'footer-menu' => esc_html__('Footer Menu','adi26r'),

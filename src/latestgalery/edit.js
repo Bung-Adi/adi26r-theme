@@ -1,31 +1,32 @@
 import { __ } from '@wordpress/i18n';
-import { RichText, useBlockProps } from '@wordpress/block-editor';
+import { InspectorControls, useBlockProps } from '@wordpress/block-editor';
+import { PanelBody, SelectControl, TextControl } from '@wordpress/components';
+import { useEffect, useState } from '@wordpress/element';
 import './editor.scss';
 
-export default function Edit() {
-	const {
-		sectionTitle,
-		sectionDescription
-	} = attributes;
+export default function Edit({ attributes, setAttributes }) {
+	const { sectionTitle, sectionDescription } = attributes;
 	return (
 		<div { ...useBlockProps() }>
+		<InspectorControls>
+			<PanelBody title={__('Gallery Display Settings', 'adi26r')}>
+				<TextControl
+					label={__('Section Title', 'adi26r')}
+					value={sectionTitle}
+					onChange={(value) => setAttributes({ sectionTitle: value })}
+				/>
+				<TextControl
+					label={__('Section Description', 'adi26r')}
+					value={sectionDescription}
+					onChange={(value) => setAttributes({ sectionDescription: value })}
+				/>
+			</PanelBody>
+		</InspectorControls>
       <section className="adi26r-latest-gallery-widget-edit">
-				<RichText 
-					tagName="h3" 
-					className="title" 
-					value={sectionTitle} 
-					onChange={(content) => setAttributes({ sectionTitle: content })} 
-					placeholder={__('please type the title', 'custom-blocks')}
-				/>
-				<RichText 
-					tagName="p" 
-					className="description" 
-					value={sectionDescription} 
-					onChange={(content) => setAttributes({ sectionDescription: content })} 
-					placeholder={__('please type the description', 'custom-blocks')}
-				/>
+				<h2>{sectionTitle}</h2>
+				<p>{sectionDescription}</p>
 				<div className='our-placeholder-block'>
-					To lazy to style it on edit screen :v
+					{__('To lazy to style it on edit screen :v', 'adi26r')}
 				</div>
 			</section>
 		</div>

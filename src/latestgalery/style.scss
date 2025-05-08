@@ -1,11 +1,48 @@
 @import '../assets/variables';
 
-.adi26r-latest-gallery-widget {
+.adi26r-latest-gallery {
   .title {
-    font-size: $font-md;
+		font-size: $font-lg;
+		color: $color-y;
+		margin-bottom: 8px;
   }
   .description {
-    font-size: $font-sm;
-    @include glassmorph-w;
+		@include glassmorph-w;
+		font-size: $font-sm;
+		color: $color-y;
+		padding: 8px;
+		margin-top: 0;
   }
+	.gallery-list {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		columns: 300px;
+		@include breakpoint-up(medium){
+			display: flex;
+			flex-wrap: wrap;
+			gap: 32px;
+		}
+		> li {
+			@include breakpoint-up(medium){
+				flex: 1 1 calc(25% - 32px);
+			}
+			a {
+				text-decoration: none;
+				width: 100%;
+				display: flex;
+				padding: 8px 0;
+				gap: 16px;
+				flex-direction: row;
+				align-items: center;
+				color: $color-y;
+				> img {
+					border-radius: $border-radius;
+					width: 100%;
+					height: auto;
+					margin-bottom: 18px;
+				}
+			}
+		}
+	}
 }

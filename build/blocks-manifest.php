@@ -153,12 +153,11 @@ return array(
 				'default' => 'please type the description'
 			)
 		),
-		'textdomain' => 'latestgalery',
+		'textdomain' => 'adi26r',
 		'editorScript' => 'file:./index.js',
 		'editorStyle' => 'file:./index.css',
 		'style' => 'file:./style-index.css',
-		'render' => 'file:./render.php',
-		'viewScript' => 'file:./view.js'
+		'render' => 'file:./render.php'
 	),
 	'latestposts' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
@@ -196,6 +195,64 @@ return array(
 		'style' => 'file:./style-index.css',
 		'render' => 'file:./render.php'
 	),
+	'myads' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'adi26r/myads',
+		'version' => '0.1.0',
+		'title' => 'Custom Ads Image by Adi',
+		'category' => 'widgets',
+		'icon' => 'admin-links',
+		'description' => 'Simple custom Image Ads by Adi',
+		'example' => array(
+			
+		),
+		'supports' => array(
+			'html' => false,
+			'align' => array(
+				'wide',
+				'full'
+			)
+		),
+		'attributes' => array(
+			'imageUrl' => array(
+				'type' => 'string',
+				'source' => 'attribute',
+				'selector' => 'img',
+				'attribute' => 'src',
+				'default' => ''
+			),
+			'imageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'imageAlt' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'linkUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'openInNewTab' => array(
+				'type' => 'boolean',
+				'default' => true
+			),
+			'alignment' => array(
+				'type' => 'string',
+				'default' => 'center'
+			),
+			'adsSize' => array(
+				'type' => 'string',
+				'default' => 'horizontal-banner'
+			)
+		),
+		'textdomain' => 'adi26r',
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./index.css',
+		'style' => 'file:./style-index.css',
+		'render' => 'file:./render.php'
+	),
 	'myarchive' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
@@ -226,6 +283,41 @@ return array(
 			)
 		),
 		'textdomain' => 'myarchive',
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./index.css',
+		'style' => 'file:./style-index.css',
+		'render' => 'file:./render.php'
+	),
+	'myarchiveaiart' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'adi26r/myarchiveaiart',
+		'version' => '0.1.0',
+		'title' => 'My Archive Concept by Adi',
+		'category' => 'widgets',
+		'icon' => 'admin-post',
+		'description' => 'Default custom AI Art post archive display with custom title and description.',
+		'example' => array(
+			
+		),
+		'supports' => array(
+			'align' => array(
+				'wide',
+				'full'
+			),
+			'html' => false
+		),
+		'attributes' => array(
+			'sectionTitle' => array(
+				'type' => 'string',
+				'default' => 'Archive Title'
+			),
+			'sectionDescription' => array(
+				'type' => 'string',
+				'default' => 'Archive Description'
+			)
+		),
+		'textdomain' => 'adi26r',
 		'editorScript' => 'file:./index.js',
 		'editorStyle' => 'file:./index.css',
 		'style' => 'file:./style-index.css',
@@ -389,6 +481,31 @@ return array(
 			)
 		),
 		'textdomain' => 'mysingle',
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./index.css',
+		'style' => 'file:./style-index.css',
+		'render' => 'file:./render.php'
+	),
+	'mysingleaiart' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'adi26r/mysingleaiart',
+		'version' => '0.1.0',
+		'title' => 'My Single AI Art post by Adi',
+		'category' => 'widgets',
+		'icon' => 'smiley',
+		'description' => 'Simple single post component for AI Art post.',
+		'example' => array(
+			
+		),
+		'supports' => array(
+			'html' => false,
+			'align' => array(
+				'wide',
+				'full'
+			)
+		),
+		'textdomain' => 'adi26r',
 		'editorScript' => 'file:./index.js',
 		'editorStyle' => 'file:./index.css',
 		'style' => 'file:./style-index.css',

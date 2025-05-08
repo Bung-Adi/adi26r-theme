@@ -1,0 +1,49 @@
+@import '../assets/variables';
+
+/**
+ * Frontend styles for the Icon Link Block
+ */
+
+ .adi26r-adsimage-block {
+  margin: 1.5em 0;
+  // Alignment
+  &.align-start {
+    display: flex;
+    justify-content: flex-start;
+  }
+  &.align-center {
+    display: flex;
+    justify-content: center;
+  }
+  &.align-end {
+    display: flex;
+    justify-content: flex-end;
+  }
+  &.vertical-banner {
+    max-width: 200px;
+    height: auto;
+  }
+  &.horizontal-banner {
+    max-width: 600px;
+    height: 60px;
+  }
+  // Link styles
+  .ads-link-wrapper {
+    display: inline-flex;
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.2s ease;
+    &:hover {
+      opacity: 0.85;
+      .icon-link-image {
+        transform: scale(1.05);
+      }
+    }
+  }
+  // Image styles
+  .ads-link-image  {
+    display: block;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+  }
+}

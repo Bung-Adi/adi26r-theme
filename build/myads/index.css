@@ -1,0 +1,95 @@
+/*!**********************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/myads/editor.scss ***!
+  \**********************************************************************************************************************************************************************************************************************************************/
+body {
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+  background-color: #2A2D32;
+  color: #E7E8E9;
+  font-family: "Play", sans-serif;
+}
+
+.our-placeholder-block {
+  padding: 20px;
+  text-align: center;
+  font-size: 1.65rem;
+  background: linear-gradient(180deg, #dedede, #adadad);
+}
+
+.read-more {
+  text-align: center;
+  margin: 20px;
+}
+.read-more .read-more-button {
+  text-decoration: none;
+  backdrop-filter: blur(13px) saturate(200%);
+  -webkit-backdrop-filter: blur(13px) saturate(200%);
+  background-color: rgba(231, 232, 233, 0.26);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  padding: 16px;
+  color: #14e8ff;
+}
+
+/**
+ * Editor styles for the Icon Link Block
+ */
+.adi26r-adsimage-block-editor {
+  padding: 16px;
+  border: 1px dashed #E7E8E9;
+  border-radius: 4px;
+}
+.adi26r-adsimage-block-editor.align-start {
+  display: flex;
+  justify-content: flex-start;
+}
+.adi26r-adsimage-block-editor.align-center {
+  display: flex;
+  justify-content: center;
+}
+.adi26r-adsimage-block-editor.align-end {
+  display: flex;
+  justify-content: flex-end;
+}
+.adi26r-adsimage-block-editor.vertical-banner {
+  max-width: 200px;
+  height: auto;
+}
+.adi26r-adsimage-block-editor.horizontal-banner {
+  max-width: 600px;
+  height: 60px;
+}
+.adi26r-adsimage-block-editor .ads-link-container {
+  display: flex;
+  transition: all 0.2s ease;
+}
+.adi26r-adsimage-block-editor .ads-placeholder {
+  cursor: pointer;
+  background-color: #E7E8E9;
+  border: 1px dashed #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  font-size: 11px;
+  text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.adi26r-adsimage-block-editor .ads-placeholder:hover {
+  background-color: #E7E8E9;
+}
+.adi26r-adsimage-block-editor .ads-link-image {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.components-panel .block-editor-url-input {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 8px;
+}
+
+/*# sourceMappingURL=index.css.map*/
