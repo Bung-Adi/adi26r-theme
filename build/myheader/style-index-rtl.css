@@ -102,7 +102,7 @@ body {
 @media (min-width: 992px) {
   .adi26r-mnav .panel .links {
     text-align: left;
-    font-size: 20px;
+    font-size: 24px;
   }
 }
 .adi26r-mnav .panel .links > ul {
@@ -188,8 +188,13 @@ body {
   text-decoration: none;
   display: block;
   padding: 0.5rem 1rem;
-  font-size: 0.9em;
+  font-size: 14px;
   transition: background-color 0.3s ease;
+}
+@media (min-width: 992px) {
+  .adi26r-mnav .panel .links > ul > li > ul li a {
+    font-size: 16px;
+  }
 }
 .adi26r-mnav .panel .links > ul > li > ul li a:hover {
   background-color: rgba(255, 255, 255, 0.1);
@@ -257,6 +262,52 @@ body {
 }
 .adi26r-main a {
   color: #14e8ff;
+  font-size: 14px;
+}
+@media (min-width: 992px) {
+  .adi26r-main a {
+    font-size: 16px;
+  }
+}
+.adi26r-main h1 {
+  font-size: 32px;
+}
+@media (min-width: 992px) {
+  .adi26r-main h1 {
+    font-size: 36px;
+  }
+}
+.adi26r-main h2 {
+  font-size: 26px;
+}
+@media (min-width: 992px) {
+  .adi26r-main h2 {
+    font-size: 28px;
+  }
+}
+.adi26r-main h3 {
+  font-size: 20px;
+}
+@media (min-width: 992px) {
+  .adi26r-main h3 {
+    font-size: 24px;
+  }
+}
+.adi26r-main h4 {
+  font-size: 14px;
+}
+@media (min-width: 992px) {
+  .adi26r-main h4 {
+    font-size: 16px;
+  }
+}
+.adi26r-main p {
+  font-size: 14px;
+}
+@media (min-width: 992px) {
+  .adi26r-main p {
+    font-size: 16px;
+  }
 }
 @media (min-width: 992px) {
   .adi26r-main {

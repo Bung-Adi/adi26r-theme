@@ -56,7 +56,7 @@
 			line-height: 25px;
       @include breakpoint-up(medium) {
         text-align: right;
-        font-size: $font-md;
+        font-size: $font-md-desk;
       }
 			> ul {
 				display: flex;
@@ -132,8 +132,11 @@
                 text-decoration: none;
                 display: block;
                 padding: 0.5rem 1rem;
-                font-size: 0.9em;
+                font-size: $font-sm;
                 transition: background-color $transition-speed ease;
+                @include breakpoint-up(medium) {
+                  font-size: $font-sm-desk;
+                }
                 &:hover {
                   background-color: rgba(255, 255, 255, 0.1);
                   color: $color-y;
@@ -203,6 +206,40 @@
   color: $color-y;
   a {
     color: $color-link;
+    font-size: $font-sm;
+    @include breakpoint-up(medium){
+      font-size: $font-sm-desk;
+    }
+  }
+  h1 {
+    font-size: $font-xl;
+    @include breakpoint-up(medium){
+      font-size: $font-xl-desk;
+    }
+  }
+  h2 {
+    font-size: $font-lg;
+    @include breakpoint-up(medium){
+      font-size: $font-lg-desk;
+    }
+  }
+  h3 {
+    font-size: $font-md;
+    @include breakpoint-up(medium){
+      font-size: $font-md-desk;
+    }
+  }
+  h4 {
+    font-size: $font-sm;
+    @include breakpoint-up(medium){
+      font-size: $font-sm-desk;
+    }
+  }
+  p {
+    font-size: $font-sm;
+    @include breakpoint-up(medium){
+      font-size: $font-sm-desk;
+    }
   }
   @include breakpoint-up(medium){
     padding: 64px 5vw 0 5vw;

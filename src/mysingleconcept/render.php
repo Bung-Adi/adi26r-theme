@@ -10,4 +10,38 @@
   <div class="entry-content">
     <?php the_content(); ?>
   </div>
+  <!-- Related Posts Section -->
+  <div class="related-posts">
+    <h2><?php esc_html_e( 'Related Posts', 'adi26r' ); ?></h2>
+    <ul>
+      <?php
+      $tags = wp_get_post_tags( get_the_ID(), array( 'fields' => 'ids' ) );
+      if ( $tags ) {
+        $query_args = array(
+          'tag__in'        => $tags, // Posts with the same tags
+          'post__not_in'   => array( get_the_ID() ), // Exclude the current post
+          'posts_per_page' => 3, // Number of related posts to display
+        );
+        $related_posts = new WP_Query( $query_args );
+
+        if ( $related_posts->have_posts() ) :
+          while ( $related_posts->have_posts() ) : $related_posts->the_post();
+      ?>
+            <li>
+              <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+            </li>
+      <?php
+          endwhile;
+          wp_reset_postdata();
+        else :
+      ?>
+          <li><?php esc_html_e( 'No related posts found.', 'adi26r' ); ?></li>
+      <?php
+        endif;
+      } else {
+      ?>
+        <li><?php esc_html_e( 'No related posts found.', 'adi26r' ); ?></li>
+      <?php } ?>
+    </ul>
+  </div>
 </article>
