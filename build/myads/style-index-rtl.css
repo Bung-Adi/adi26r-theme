@@ -20,6 +20,7 @@ body {
 .read-more {
   text-align: center;
   margin: 20px;
+  padding-top: 8px;
 }
 .read-more .read-more-button {
   text-decoration: none;
@@ -50,29 +51,49 @@ body {
   display: flex;
   justify-content: flex-end;
 }
-.adi26r-adsimage-block.vertical-banner {
-  max-width: 200px;
-  height: auto;
+.adi26r-adsimage-block .vertical-banner {
+  width: 90%;
 }
-.adi26r-adsimage-block.horizontal-banner {
-  max-width: 600px;
-  height: 60px;
+@media (min-width: 992px) {
+  .adi26r-adsimage-block .vertical-banner {
+    width: 200px;
+  }
+}
+.adi26r-adsimage-block .horizontal-banner {
+  height: 80px;
 }
 .adi26r-adsimage-block .ads-link-wrapper {
+  position: relative;
   display: inline-flex;
   text-decoration: none;
   color: inherit;
   transition: opacity 0.2s ease;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(13px) saturate(200%);
+  -webkit-backdrop-filter: blur(13px) saturate(200%);
+  background-color: rgba(231, 232, 233, 0.26);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
 }
-.adi26r-adsimage-block .ads-link-wrapper:hover {
-  opacity: 0.85;
-}
-.adi26r-adsimage-block .ads-link-wrapper:hover .icon-link-image {
-  transform: scale(1.05);
-}
-.adi26r-adsimage-block .ads-link-image {
+.adi26r-adsimage-block .ads-link-wrapper .ads-link-image {
   display: block;
   -o-object-fit: contain;
      object-fit: contain;
   transition: transform 0.2s ease;
+}
+.adi26r-adsimage-block .ads-link-wrapper .noads {
+  padding: 4px 16px;
+  display: inherit;
+  align-items: center;
+  justify-content: center;
+}
+.adi26r-adsimage-block .ads-link-wrapper .ads-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.adi26r-adsimage-block .ads-link-wrapper:hover .ads-link-image {
+  transform: scale(1.05);
 }

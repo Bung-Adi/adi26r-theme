@@ -1,1 +1,26 @@
 @import '../assets/variables';
+
+.related-posts {
+  margin-top: 32px;
+  > h2 {
+	  @include glassmorph-w;
+    padding: 8px;
+  }
+  > ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		columns: 300px;
+    > li {
+			width: 100%;
+			object-fit: contain;
+      a {
+        text-decoration: none;
+        > img {
+					width: 100%;
+					height: auto;
+        }
+      }
+    }
+  }
+}

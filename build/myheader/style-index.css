@@ -20,6 +20,7 @@ body {
 .read-more {
   text-align: center;
   margin: 20px;
+  padding-top: 8px;
 }
 .read-more .read-more-button {
   text-decoration: none;
@@ -226,6 +227,7 @@ body {
 .adi26r-mnav-button .burger .text {
   margin: 0;
   position: relative;
+  color: #2A2D32;
 }
 .adi26r-mnav-button .burger .line {
   display: inline-block;

@@ -20,6 +20,7 @@ body {
 .read-more {
   text-align: center;
   margin: 20px;
+  padding-top: 8px;
 }
 .read-more .read-more-button {
   text-decoration: none;
@@ -55,26 +56,13 @@ body {
   -moz-columns: 300px;
        columns: 300px;
 }
-@media (min-width: 992px) {
-  .adi26r-latest-gallery .gallery-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 32px;
-  }
-}
-@media (min-width: 992px) {
-  .adi26r-latest-gallery .gallery-list > li {
-    flex: 1 1 calc(25% - 32px);
-  }
+.adi26r-latest-gallery .gallery-list > li {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .adi26r-latest-gallery .gallery-list > li a {
   text-decoration: none;
-  width: 100%;
-  display: flex;
-  padding: 8px 0;
-  gap: 16px;
-  flex-direction: row;
-  align-items: center;
   color: #E7E8E9;
 }
 .adi26r-latest-gallery .gallery-list > li a > img {

@@ -8,6 +8,12 @@
     margin: 0;
     .wp-block-social-link {
       border-radius: $border-radius;
+      > a {
+        font-size: $font-md;
+        @include breakpoint-up (medium){
+          font-size: $font-md-desk;
+        }
+      }
     }
   }
 }

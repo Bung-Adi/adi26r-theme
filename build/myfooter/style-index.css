@@ -20,6 +20,7 @@ body {
 .read-more {
   text-align: center;
   margin: 20px;
+  padding-top: 8px;
 }
 .read-more .read-more-button {
   text-decoration: none;
@@ -64,8 +65,8 @@ body {
 }
 .adi26r-footer > ul > li > a {
   font-size: 20px;
-  color: #E7E8E9;
   text-decoration: none;
+  color: #14e8ff;
 }
 .adi26r-footer .credit {
   font-size: 12px;

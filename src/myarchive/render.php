@@ -21,9 +21,23 @@ $query = new WP_Query($args);
                 <?php while ($query->have_posts()) : $query->the_post(); ?>
                     <li class="post-item">
                         <a href="<?php the_permalink(); ?>" class="post-link">
-                            <h2 class="post-title"><?php the_title(); ?></h2>
+                            <div class="post-thumb">
+                                <?php if (has_post_thumbnail()) : ?>
+                                    <div class="post-thumbnail">
+                                        <img src="<?php echo esc_url(get_the_post_thumbnail_url(get_the_ID(), 'medium')); ?>" alt="<?php the_title_attribute(); ?>">
+                                    </div>
+                                <?php else : ?>
+                                    <div class="post-thumbnail">
+                                        <img src="<?php echo esc_url(get_template_directory_uri() . '/img/a26r-square-medium.jpg'); ?>" alt="<?php esc_attr_e('Default Thumbnail', 'adi26r'); ?>">
+                                    </div>
+                                <?php endif; ?>
+                                <span>
+                                    <h2 class="post-title"><?php the_title(); ?></h2>
+                                    <p class="post-date"><?php echo get_the_date(); ?></p>
+                                </span>
+                            </div>
+                            <div class="post-excerpt"><?php the_excerpt(); ?></div>
                         </a>
-                        <div class="post-excerpt"><?php the_excerpt(); ?></div>
                     </li>
                 <?php endwhile; ?>
             </ul>

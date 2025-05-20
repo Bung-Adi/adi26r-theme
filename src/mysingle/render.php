@@ -11,7 +11,7 @@
     <?php the_content(); ?>
   </div>
   <!-- Related Posts Section -->
-  <div class="related-posts">
+  <aside class="related-posts">
     <h2><?php esc_html_e( 'Related Posts', 'adi26r' ); ?></h2>
     <ul>
       <?php
@@ -37,7 +37,7 @@
         <li><?php esc_html_e( 'No related posts found.', 'adi26r' ); ?></li>
       <?php endif; ?>
     </ul>
-  </div>
+  </aside>
   <?php
     if ( comments_open() || get_comments_number() ) {
         comments_template();

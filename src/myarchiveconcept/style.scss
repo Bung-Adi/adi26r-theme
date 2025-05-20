@@ -1,9 +1,58 @@
 @import '../assets/variables';
 
 .adi26r-myarchive-concept {
-  .archive-title {
-		font-size: $font-lg;
-		color: $color-y;
-		margin-bottom: 8px;
+	.archive-header {
+		@include glassmorph-w;
+		margin-bottom: 32px;
+    padding: 0 8px;
+		.archive-title {
+			font-size: $font-lg;
+			color: $color-y;
+			margin-bottom: 8px;
+		}
+	}
+	.archive-posts {
+		.posts-list {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			@include breakpoint-up(medium){
+				display: flex;
+				flex-wrap: wrap;
+				gap: 32px;
+			}
+			> li {
+				@include breakpoint-up(medium){
+					flex: 1 1 calc(25% - 32px);
+				}
+				a {
+					text-decoration: none;
+					width: 100%;
+					display: flex;
+					padding: 8px 0;
+					flex-direction: column;
+					align-items: flex-start;
+					color: $color-y;
+					.post-thumb {
+						display: flex;
+						flex-direction: row;
+						align-items: flex-start;
+						justify-content: flex-start;
+						gap: 16px;
+						> div {
+							width: auto;
+							height: 150px;
+							@include breakpoint-up(medium){
+								height: 300px;
+							}
+							> img {
+								width: auto;
+								height: 100%;
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 }

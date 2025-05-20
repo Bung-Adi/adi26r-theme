@@ -34,4 +34,42 @@ function add_google_fonts() {
   wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap', false);
 }
 add_action('wp_enqueue_scripts', 'add_google_fonts');
+
+// custom login logo
+function adi26r_custom_login_logo() {
+  echo '<style type="text/css">
+    #login h1 a {
+      background-image: url(' . get_stylesheet_directory_uri() . '/img/adi26r-logo-w.png);
+      background-size: contain;
+      width: 100%;
+      height: 80px;
+    }
+    body.login {
+      background-color: #2A2D32;
+      font-family: "Play", sans-serif;
+    }
+  </style>';
+}
+add_action('login_head', 'adi26r_custom_login_logo');
+
+function adi26r_login_logo_url() {
+  return home_url();
+}
+add_filter('login_headerurl', 'adi26r_login_logo_url');
+
+function adi26r_login_logo_url_title() {
+  return get_bloginfo('name');
+}
+add_filter('login_headertext', 'adi26r_login_logo_url_title');
+
+// Excerpt
+function custom_excerpt_length($length) {
+    return 15;
+}
+add_filter('excerpt_length', 'custom_excerpt_length');
+
+function custom_excerpt_more($more) {
+    return '...';
+}
+add_filter('excerpt_more', 'custom_excerpt_more');
 ?>

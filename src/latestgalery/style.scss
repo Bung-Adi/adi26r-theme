@@ -18,23 +18,11 @@
 		margin: 0;
 		padding: 0;
 		columns: 300px;
-		@include breakpoint-up(medium){
-			display: flex;
-			flex-wrap: wrap;
-			gap: 32px;
-		}
 		> li {
-			@include breakpoint-up(medium){
-				flex: 1 1 calc(25% - 32px);
-			}
+			width: 100%;
+			object-fit: contain;
 			a {
 				text-decoration: none;
-				width: 100%;
-				display: flex;
-				padding: 8px 0;
-				gap: 16px;
-				flex-direction: row;
-				align-items: center;
 				color: $color-y;
 				> img {
 					border-radius: $border-radius;

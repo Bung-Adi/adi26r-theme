@@ -29,8 +29,8 @@ export default function Edit({ attributes, setAttributes }) {
     // Handler for selecting image
     const onSelectImage = (media) => {
         // Make sure we have the correct URL format
-        const imageUrl = media.sizes && media.sizes.thumbnail ? 
-            media.sizes.thumbnail.url : 
+        const imageUrl = media.sizes && media.sizes.medium ? 
+            media.sizes.medium.url : 
             media.url;
             
         setAttributes({

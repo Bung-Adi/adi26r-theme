@@ -1,1 +1,20 @@
 @import '../assets/variables';
+
+.entry-header {
+	@include glassmorph-w;
+  padding: 0 8px;
+}
+
+.related-posts {
+  margin-top: 32px;
+  > h2 {
+	  @include glassmorph-w;
+    padding: 8px;
+  }
+  > ul {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+  }
+}

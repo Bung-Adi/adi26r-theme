@@ -20,6 +20,7 @@ body {
 .read-more {
   text-align: center;
   margin: 20px;
+  padding-top: 8px;
 }
 .read-more .read-more-button {
   text-decoration: none;
@@ -46,6 +47,14 @@ body {
 }
 .glassmorphism-wraper .wp-block-social-links .wp-block-social-link {
   border-radius: 8px;
+}
+.glassmorphism-wraper .wp-block-social-links .wp-block-social-link > a {
+  font-size: 20px;
+}
+@media (min-width: 992px) {
+  .glassmorphism-wraper .wp-block-social-links .wp-block-social-link > a {
+    font-size: 24px;
+  }
 }
 
 /*# sourceMappingURL=index.css.map*/

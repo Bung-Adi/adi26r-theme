@@ -19,31 +19,49 @@
     display: flex;
     justify-content: flex-end;
   }
-  &.vertical-banner {
-    max-width: 200px;
-    height: auto;
+  .vertical-banner {
+    width: 90%;
+    @include breakpoint-up(medium){
+      width: 200px;
+    }
   }
-  &.horizontal-banner {
-    max-width: 600px;
-    height: 60px;
+  .horizontal-banner {
+    height: 80px;
   }
   // Link styles
   .ads-link-wrapper {
+    position: relative;
     display: inline-flex;
     text-decoration: none;
     color: inherit;
     transition: opacity 0.2s ease;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    @include glassmorph-w;
+    // Image styles
+    .ads-link-image  {
+      display: block;
+      object-fit: contain;
+      transition: transform 0.2s ease;
+    }
+    // No adds
+    .noads {
+      padding: 4px 16px;
+      display: inherit;
+      align-items: center;
+      justify-content: center;
+    }
+    // ads badge
+    .ads-badge {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
     &:hover {
-      opacity: 0.85;
-      .icon-link-image {
+      .ads-link-image {
         transform: scale(1.05);
       }
     }
-  }
-  // Image styles
-  .ads-link-image  {
-    display: block;
-    object-fit: contain;
-    transition: transform 0.2s ease;
   }
 }

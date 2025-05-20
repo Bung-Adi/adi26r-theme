@@ -21,7 +21,7 @@ $query = new WP_Query($args);
                 <?php while ($query->have_posts()) : $query->the_post(); ?>
                     <li class="post-item">
                         <a href="<?php the_permalink(); ?>" class="post-link">
-                            <img class="gridpost_image" src="<?php the_post_thumbnail_url('thumbnail');?>" 
+                            <img class="gridpost_image" src="<?php the_post_thumbnail_url('medium');?>" 
                             <?php $alt_text = get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', true);?> 
                             alt="<?php echo esc_html($alt_text);?>">
                         </a>

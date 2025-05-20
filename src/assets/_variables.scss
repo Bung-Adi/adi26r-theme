@@ -68,6 +68,7 @@ $breakpoints-up: ("small": "768px", "medium": "992px", "large": "1200px", "xlarg
 .read-more {
   text-align: center;
   margin: 20px;
+  padding-top: 8px;
   .read-more-button {
     text-decoration: none;
     @include glassmorph-w;
@@ -75,3 +76,4 @@ $breakpoints-up: ("small": "768px", "medium": "992px", "large": "1200px", "xlarg
     color: #14e8ff;
   }
 }
+

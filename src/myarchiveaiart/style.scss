@@ -1,9 +1,34 @@
 @import '../assets/variables';
 
 .adi26r-myarchive-aiart {
-  .archive-title {
-		font-size: $font-lg;
-		color: $color-y;
-		margin-bottom: 8px;
+	.archive-header {
+		@include glassmorph-w;
+		margin-bottom: 32px;
+    padding: 0 8px;
+		.archive-title {
+			font-size: $font-lg;
+			color: $color-y;
+			margin-bottom: 8px;
+		}
+	}
+	.archive-posts {
+		.posts-list {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			columns: 300px;
+			> li {
+				width: 100%;
+				object-fit: contain;
+				a {
+					text-decoration: none;
+					color: $color-y;
+					> img {
+						width: 100%;
+						height: auto;
+					}
+				}
+			}
+		}
 	}
 }
