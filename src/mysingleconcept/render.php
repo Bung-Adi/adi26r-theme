@@ -7,11 +7,11 @@
       <?php esc_html_e( 'by', 'adi26r' ); ?> <?php the_author(); ?>
     </p>
   </header>
-  <div class="entry-content">
+  <section class="entry-content">
     <?php the_content(); ?>
-  </div>
+  </section>
   <!-- Related Posts Section -->
-  <aside class="related-posts">
+  <section class="related-posts">
     <h2><?php esc_html_e( 'Related Posts', 'adi26r' ); ?></h2>
     <ul>
       <?php
@@ -43,5 +43,5 @@
         <li><?php esc_html_e( 'No related posts found.', 'adi26r' ); ?></li>
       <?php } ?>
     </ul>
-  </aside>
+  </section>
 </article>

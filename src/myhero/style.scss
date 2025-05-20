@@ -9,6 +9,17 @@
     width: 400px;
     height: 600px;
     z-index: -1;
+    @include breakpoint-up(small){
+      top: -10%;
+    }
+		@include breakpoint-up(medium){
+      left: 60%;
+      top: -20%;
+		}
+    @include breakpoint-up(large){
+      left: 70%;
+      top: -30%;
+    }
     > img {
       width: 100%;
       height: auto;

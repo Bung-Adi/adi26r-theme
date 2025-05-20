@@ -44,6 +44,23 @@ body {
   height: 600px;
   z-index: -1;
 }
+@media (min-width: 768px) {
+  .section-hero-block .adi26r-site-ilus {
+    top: -10%;
+  }
+}
+@media (min-width: 992px) {
+  .section-hero-block .adi26r-site-ilus {
+    right: 60%;
+    top: -20%;
+  }
+}
+@media (min-width: 1200px) {
+  .section-hero-block .adi26r-site-ilus {
+    right: 70%;
+    top: -30%;
+  }
+}
 .section-hero-block .adi26r-site-ilus > img {
   width: 100%;
   height: auto;

@@ -1,5 +1,37 @@
 @import '../assets/variables';
 
+.entry-title {
+	@include glassmorph-w;
+  padding: 8px;
+}
+
+.entry-content {
+  > div {
+    > a {
+      @include glassmorph-w;
+      padding: 8px;
+      text-decoration: none;
+    }
+  }
+}
+
+.content-tags {
+  padding: 16px 0;
+  .post-tags {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    flex-wrap: wrap;
+    > a {
+      @include glassmorph-w;
+      padding: 8px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+}
+
 .related-posts {
   margin-top: 32px;
   > h2 {

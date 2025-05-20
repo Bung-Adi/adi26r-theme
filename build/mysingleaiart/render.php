@@ -9,11 +9,25 @@
   <div class="entry-content">
     <?php the_content(); ?>
   </div>
+  <div class="content-tags">
+    <h2>Tags : </h2>
+    <?php
+      $tags = get_the_terms(get_the_ID(), 'post_tag');
+      if ( $tags && ! is_wp_error( $tags ) ) {
+          echo '<ul class="post-tags">';
+          foreach ( $tags as $tag ) {
+    ?>
+            <a href="<?php echo esc_url( get_tag_link( $tag ) ); ?>" rel="tag"><?php echo esc_html( $tag->name ); ?></a>
+    <?php
+          }
+          echo '</ul>';
+      }
+    ?>
+  </div>
   <aside class="related-posts">
     <h2><?php esc_html_e( 'Related Images', 'adi26r' ); ?></h2>
     <ul>
       <?php
-      $tags = get_the_terms(get_the_ID(), 'post_tag');
       if ( $tags && ! is_wp_error( $tags ) && isset($tags[0]) ) {
         $first_tag = $tags[0]->term_id;
         $query_args = array(
