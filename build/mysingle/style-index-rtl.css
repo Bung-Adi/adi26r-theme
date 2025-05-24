@@ -40,6 +40,7 @@ body {
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.125);
   padding: 0 8px;
+  margin-bottom: 32px;
 }
 
 .related-posts {
@@ -79,6 +80,9 @@ h3#comments a {
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.125);
   padding: 8px;
+}
+.comment-respond .comment-form .comment-form-comment > textarea {
+  border-radius: 8px;
 }
 .comment-respond .comment-form .form-submit > input {
   backdrop-filter: blur(13px) saturate(200%);

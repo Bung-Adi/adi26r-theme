@@ -1,24 +1,4 @@
-/**
- * Use this file for JavaScript code that you want to run in the front-end
- * on posts/pages that contain this block.
- *
- * When this file is defined as the value of the `viewScript` property
- * in `block.json` it will be enqueued on the front end of the site.
- *
- * Example:
- *
- * ```js
- * {
- *   "viewScript": "file:./view.js"
- * }
- * ```
- *
- * If you're not making any changes to this file because your project doesn't need any
- * JavaScript running in the front-end, then you should delete this file and remove
- * the `viewScript` property from `block.json`.
- *
- * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-metadata/#view-script
- */
+import axios from "axios"
 
 /* eslint-disable no-console */
 /**
@@ -161,8 +141,164 @@ class ResponsiveNavigation {
   }
 }
 
+class Search {
+  // 1. describe and create/initiate our object
+  constructor() {
+    this.addSearchHTML()
+    this.resultsDiv = document.querySelector("#search-overlay__results")
+    this.openButton = document.querySelectorAll(".js-search-trigger")
+    this.closeButton = document.querySelector(".search-overlay__close")
+    this.searchOverlay = document.querySelector(".search-overlay")
+    this.searchField = document.querySelector("#search-term")
+    this.isOverlayOpen = false
+    this.isSpinnerVisible = false
+    this.previousValue
+    this.typingTimer
+    this.events()
+  }
+
+  // 2. events
+  events() {
+    this.openButton.forEach(el => {
+      el.addEventListener("click", e => {
+        e.preventDefault()
+        this.openOverlay()
+      })
+    })
+
+    this.closeButton.addEventListener("click", () => this.closeOverlay())
+    document.addEventListener("keydown", e => this.keyPressDispatcher(e))
+    this.searchField.addEventListener("keyup", () => this.typingLogic())
+  }
+
+  // 3. methods (function, action...)
+  typingLogic() {
+    if (this.searchField.value != this.previousValue) {
+      clearTimeout(this.typingTimer)
+
+      if (this.searchField.value) {
+        if (!this.isSpinnerVisible) {
+          this.resultsDiv.innerHTML = '<div class="spinner-loader"></div>'
+          this.isSpinnerVisible = true
+        }
+        this.typingTimer = setTimeout(this.getResults.bind(this), 750)
+      } else {
+        this.resultsDiv.innerHTML = ""
+        this.isSpinnerVisible = false
+      }
+    }
+
+    this.previousValue = this.searchField.value
+  }
+
+  async getResults() {
+    try {
+      const response = await axios.get(
+        `${adi26rData.root_url}/wp-json/adi26r/v1/search`,
+        { params: { term: this.searchField.value } }
+      );
+      const results = response.data;
+      this.resultsDiv.innerHTML = `
+        <div class="row">
+          <div class="one-third">
+            <h2 class="search-overlay__section-title">Pages</h2>
+            ${results.pages.length ? '<ul class="link-list min-list">' : "<p>No pages match that search.</p>"}
+              ${results.pages.map(item => `<li><a href="${item.permalink}">${item.title}</a></li>`).join("")}
+            ${results.pages.length ? "</ul>" : ""}
+          </div>
+          <div class="one-third">
+            <h2 class="search-overlay__section-title">Posts</h2>
+            ${results.post.length ? '<ul class="link-list min-list">' : `<p>No posts match that search.</p>`}
+              ${results.post.map(item => `<li><a href="${item.permalink}"><img src="${item.image}"><p>${item.title}</p></a></li>`).join("")}
+            ${results.post.length ? "</ul>" : ""}
+          </div>
+          <div class="one-third">
+            <h2 class="search-overlay__section-title">AI Art Gallery</h2>
+            ${results['ai-art-gallery'].length ? '<ul class="link-list min-list">' : "<p>No AI art matches that search.</p>"}
+              ${results['ai-art-gallery'].map(item => `<li><a href="${item.permalink}"><img src="${item.image}"><p>${item.title}</p></a></li>`).join("")}
+            ${results['ai-art-gallery'].length ? "</ul>" : ""}
+          </div>
+          <div class="one-third">
+            <h2 class="search-overlay__section-title">Concepts</h2>
+            ${results.concept.length ? '<ul class="link-list min-list">' : "<p>No concepts match that search.</p>"}
+              ${results.concept.map(item => `<li><a href="${item.permalink}"><img src="${item.image}"><p>${item.title}</p></a></li>`).join("")}
+            ${results.concept.length ? "</ul>" : ""}
+          </div>
+        </div>
+      `;
+      this.isSpinnerVisible = false;
+    } catch (e) {
+      this.resultsDiv.innerHTML = "<p class='search-error'>Something went wrong. Please try again.</p>";
+      this.isSpinnerVisible = false;
+      console.log(e);
+    }
+  }
+
+  keyPressDispatcher(e) {
+    if (e.keyCode == 83 && !this.isOverlayOpen && document.activeElement.tagName != "INPUT" && document.activeElement.tagName != "TEXTAREA") {
+      this.openOverlay()
+    }
+
+    if (e.keyCode == 27 && this.isOverlayOpen) {
+      this.closeOverlay()
+    }
+  }
+
+  openOverlay() {
+    this.searchOverlay.classList.add("search-overlay--active")
+    document.body.classList.add("body-no-scroll")
+    this.searchField.value = ""
+    setTimeout(() => this.searchField.focus(), 301)
+    console.log("our open method just ran!")
+    this.isOverlayOpen = true
+    return false
+  }
+
+  closeOverlay() {
+    this.searchOverlay.classList.remove("search-overlay--active")
+    document.body.classList.remove("body-no-scroll")
+    console.log("our close method just ran!")
+    this.isOverlayOpen = false
+  }
+
+  addSearchHTML() {
+    document.body.insertAdjacentHTML(
+      "beforeend",
+      `
+      <div class="search-overlay">
+        <div class="search-overlay__top">
+          <div class="container">
+            <input type="text" class="search-term" placeholder="What are you looking for?" id="search-term">
+            <button class="search-overlay__icon" aria-label="search">search</button>
+          </div>
+        </div>
+        
+        <div class="container">
+          <div id="search-overlay__results"></div>
+        </div>
+
+        <div class="search-close-container">
+          <button class="search-overlay__close" aria-label="close search">
+            <span class="line line-a"></span>
+            <span class="line line-b"></span>
+          </button>
+        </div>
+
+      </div>
+    `
+    )
+  }
+}
+// Ensure adi26rData is defined to avoid runtime errors
+if (typeof adi26rData === "undefined") {
+  window.adi26rData = {
+    root_url: window.location.origin // fallback to current origin if not set by WP
+  };
+}
+
 // Initialize navigation
 document.addEventListener('DOMContentLoaded', () => {
   new ResponsiveNavigation();
+  new Search();
 });
 /* eslint-enable no-console */

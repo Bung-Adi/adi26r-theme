@@ -31,7 +31,7 @@
       </ul>
     </div>
     <div class="search">
-      <a href="#" aria-label="search button of adi26r website">
+      <a href="javascript:void(0)" class="search-trigger js-search-trigger" aria-label="search button of adi26r website">
         <img src="<?php echo get_template_directory_uri(); ?>/img/akar-icons_search.svg" alt="search icon"/>
       </a>
     </div>

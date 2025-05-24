@@ -35,6 +35,9 @@ function add_google_fonts() {
 }
 add_action('wp_enqueue_scripts', 'add_google_fonts');
 
+//
+require get_theme_file_path('/inc/search-route.php');
+
 // custom login logo
 function adi26r_custom_login_logo() {
   echo '<style type="text/css">

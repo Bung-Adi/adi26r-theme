@@ -34,6 +34,11 @@ h3#comments {
     padding: 8px;
   }
   .comment-form {
+    .comment-form-comment {
+      > textarea {
+        border-radius: $border-radius;
+      }
+    }
     .form-submit {
       > input {
         @include glassmorph-w;
