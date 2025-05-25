@@ -8,7 +8,7 @@
   \*******************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"adi26r/myhero","version":"0.1.0","title":"My Hero Section","category":"widgets","icon":"star-filled","description":"adi26r hero section.","example":{},"supports":{"align":["full"]},"attributes":{"themeimage":{"type":"string"},"align":{"type":"string","default":"full"},"imgID":{"type":"number"},"imgURL":{"type":"string"}},"textdomain":"myhero","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"adi26r/myhero","version":"0.1.0","title":"My Hero Section","category":"widgets","icon":"star-filled","description":"adi26r hero section.","example":{},"supports":{"align":["full"]},"attributes":{"themeimage":{"type":"string"},"align":{"type":"string","default":"full"},"imgID":{"type":"number"},"imgURL":{"type":"string"}},"textdomain":"adi26r","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php"}');
 
 /***/ }),
 

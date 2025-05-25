@@ -8,7 +8,7 @@
   \************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"adi26r/wraperglass","version":"0.1.0","title":"glassmorphism wraper div","category":"widgets","icon":"thumbs-up","description":"adi26r glassmorphism div wraper","example":{},"supports":{"html":false,"children":true},"attributes":{"align":{"type":"string","default":"full"}},"textdomain":"wraperglass","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"adi26r/wraperglass","version":"0.1.0","title":"glassmorphism wraper div","category":"widgets","icon":"thumbs-up","description":"adi26r glassmorphism div wraper","example":{},"supports":{"html":false,"children":true},"attributes":{"align":{"type":"string","default":"full"}},"textdomain":"adi26r","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php"}');
 
 /***/ }),
 

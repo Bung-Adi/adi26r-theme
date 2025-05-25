@@ -8,7 +8,7 @@
   \**********************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"adi26r/myarchive","version":"0.1.0","title":"My Archive by Adi","category":"widgets","icon":"admin-post","description":"Default post archive display with custom title and description.","example":{},"supports":{"align":["wide","full"],"html":false},"attributes":{"sectionTitle":{"type":"string","default":"Archive Title"},"sectionDescription":{"type":"string","default":"Archive Description"}},"textdomain":"myarchive","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"adi26r/myarchive","version":"0.1.0","title":"My Archive by Adi","category":"widgets","icon":"admin-post","description":"Default post archive display with custom title and description.","example":{},"supports":{"align":["wide","full"],"html":false},"attributes":{"sectionTitle":{"type":"string","default":"Archive Title"},"sectionDescription":{"type":"string","default":"Archive Description"}},"textdomain":"adi26r","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php"}');
 
 /***/ }),
 

@@ -33,6 +33,22 @@ body {
   color: #14e8ff;
 }
 
+.pagination {
+  margin-top: 32px;
+}
+.pagination .page-numbers {
+  text-decoration: none;
+  margin: 0 4px;
+}
+.pagination .page-numbers.current {
+  backdrop-filter: blur(13px) saturate(200%);
+  -webkit-backdrop-filter: blur(13px) saturate(200%);
+  background-color: rgba(231, 232, 233, 0.26);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  padding: 8px;
+}
+
 .adi26r-myarchive .archive-header {
   backdrop-filter: blur(13px) saturate(200%);
   -webkit-backdrop-filter: blur(13px) saturate(200%);
@@ -76,7 +92,7 @@ body {
 .adi26r-myarchive .archive-posts .posts-list > li a .post-thumb {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
   gap: 16px;
 }
@@ -84,7 +100,7 @@ body {
   width: auto;
   height: 150px;
 }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .adi26r-myarchive .archive-posts .posts-list > li a .post-thumb > div {
     height: 300px;
   }
@@ -92,4 +108,5 @@ body {
 .adi26r-myarchive .archive-posts .posts-list > li a .post-thumb > div > img {
   width: auto;
   height: 100%;
+  border-radius: 8px;
 }

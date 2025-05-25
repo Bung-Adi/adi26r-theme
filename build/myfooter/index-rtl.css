@@ -37,3 +37,19 @@ body {
   padding: 16px;
   color: #14e8ff;
 }
+
+.pagination {
+  margin-top: 32px;
+}
+.pagination .page-numbers {
+  text-decoration: none;
+  margin: 0 4px;
+}
+.pagination .page-numbers.current {
+  backdrop-filter: blur(13px) saturate(200%);
+  -webkit-backdrop-filter: blur(13px) saturate(200%);
+  background-color: rgba(231, 232, 233, 0.26);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  padding: 8px;
+}

@@ -1,0 +1,96 @@
+/*!*********************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/mytag/style.scss ***!
+  \*********************************************************************************************************************************************************************************************************************************************/
+body {
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+  background-color: #2A2D32;
+  color: #E7E8E9;
+  font-family: "Play", sans-serif;
+}
+
+.our-placeholder-block {
+  padding: 20px;
+  text-align: center;
+  font-size: 1.65rem;
+  background: linear-gradient(-180deg, #dedede, #adadad);
+}
+
+.read-more {
+  text-align: center;
+  margin: 20px;
+  padding-top: 8px;
+}
+.read-more .read-more-button {
+  text-decoration: none;
+  backdrop-filter: blur(13px) saturate(200%);
+  -webkit-backdrop-filter: blur(13px) saturate(200%);
+  background-color: rgba(231, 232, 233, 0.26);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  padding: 16px;
+  color: #14e8ff;
+}
+
+.pagination {
+  margin-top: 32px;
+}
+.pagination .page-numbers {
+  text-decoration: none;
+  margin: 0 4px;
+}
+.pagination .page-numbers.current {
+  backdrop-filter: blur(13px) saturate(200%);
+  -webkit-backdrop-filter: blur(13px) saturate(200%);
+  background-color: rgba(231, 232, 233, 0.26);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  padding: 8px;
+}
+
+.adi26r-mytag .archive-header {
+  backdrop-filter: blur(13px) saturate(200%);
+  -webkit-backdrop-filter: blur(13px) saturate(200%);
+  background-color: rgba(231, 232, 233, 0.26);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  margin-bottom: 32px;
+  padding: 0 8px;
+}
+.adi26r-mytag .archive-header .archive-title {
+  color: #E7E8E9;
+  margin-bottom: 8px;
+}
+.adi26r-mytag .tag-archive-posts > h2 {
+  backdrop-filter: blur(13px) saturate(200%);
+  -webkit-backdrop-filter: blur(13px) saturate(200%);
+  background-color: rgba(231, 232, 233, 0.26);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  padding: 8px;
+}
+.adi26r-mytag .tag-archive-posts > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  -moz-columns: 300px;
+       columns: 300px;
+}
+.adi26r-mytag .tag-archive-posts > ul > li {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-bottom: 16px;
+}
+.adi26r-mytag .tag-archive-posts > ul > li a {
+  text-decoration: none;
+  color: #E7E8E9;
+}
+.adi26r-mytag .tag-archive-posts > ul > li a > img {
+  width: 100%;
+  height: auto;
+}
+.adi26r-mytag > section:nth-child(3) {
+  margin-top: 64px;
+}

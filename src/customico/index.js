@@ -12,12 +12,12 @@ registerBlockType(metadata.name, {
     /**
      * Block title
      */
-    title: __('Custom Ico by Adi', 'custom-blocks'),
+    title: __('Custom Ico by Adi', 'adi26r'),
     
     /**
      * Block description
      */
-    description: __('Make a custom icon with a link and optional text', 'custom-blocks'),
+    description: __('Make a custom icon with a link and optional text', 'adi26r'),
     
     /**
      * Block category

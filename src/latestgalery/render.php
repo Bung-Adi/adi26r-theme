@@ -35,7 +35,7 @@
   </ul>
   <div class="read-more">
     <a href="<?php echo get_post_type_archive_link('ai-art-gallery'); ?>" class="read-more-button">
-      <?php esc_html_e('Read More', 'adi26r'); ?>
+      <?php esc_html_e('More Images', 'adi26r'); ?>
     </a>
   </div>
 </section>

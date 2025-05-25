@@ -26,7 +26,7 @@
       "default": "please type the description"
 		}
   },
-	"textdomain": "latestposts",
+	"textdomain": "adi26r",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",
 	"style": "file:./style-index.css",

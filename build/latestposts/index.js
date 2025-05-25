@@ -8,7 +8,7 @@
   \************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"adi26r/latestposts","version":"0.1.0","title":"Latest posts by Adi","category":"widgets","icon":"admin-post","description":"Display the latest posts from a selected post type.","example":{},"supports":{"html":false,"children":true},"attributes":{"postType":{"type":"string","default":"post"},"sectionTitle":{"type":"string","default":"please type the title"},"sectionDescription":{"type":"string","default":"please type the description"}},"textdomain":"latestposts","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"adi26r/latestposts","version":"0.1.0","title":"Latest posts by Adi","category":"widgets","icon":"admin-post","description":"Display the latest posts from a selected post type.","example":{},"supports":{"html":false,"children":true},"attributes":{"postType":{"type":"string","default":"post"},"sectionTitle":{"type":"string","default":"please type the title"},"sectionDescription":{"type":"string","default":"please type the description"}},"textdomain":"adi26r","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php"}');
 
 /***/ }),
 

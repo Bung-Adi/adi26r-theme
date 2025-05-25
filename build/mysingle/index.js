@@ -8,7 +8,7 @@
   \*********************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"adi26r/mysingle","version":"0.1.0","title":"My Single by Adi","category":"widgets","icon":"smiley","description":"Simple single post component.","example":{},"supports":{"html":false,"align":["wide","full"]},"textdomain":"mysingle","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"adi26r/mysingle","version":"0.1.0","title":"My Single by Adi","category":"widgets","icon":"smiley","description":"Simple single post component.","example":{},"supports":{"html":false,"align":["wide","full"]},"textdomain":"adi26r","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php"}');
 
 /***/ }),
 

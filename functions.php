@@ -67,7 +67,7 @@ add_filter('login_headertext', 'adi26r_login_logo_url_title');
 
 // Excerpt
 function custom_excerpt_length($length) {
-    return 15;
+    return 12;
 }
 add_filter('excerpt_length', 'custom_excerpt_length');
 

@@ -34,9 +34,9 @@ $query = new WP_Query($args);
                                 <span>
                                     <h2 class="post-title"><?php the_title(); ?></h2>
                                     <p class="post-date"><?php echo get_the_date(); ?></p>
+                                    <p class="post-excerpt"><?php the_excerpt(); ?></p>
                                 </span>
                             </div>
-                            <div class="post-excerpt"><?php the_excerpt(); ?></div>
                         </a>
                     </li>
                 <?php endwhile; ?>

@@ -65,7 +65,7 @@ export default function Edit({ attributes, setAttributes }) {
     return (
         <>
             <InspectorControls>
-                <PanelBody title={__('Icon Settings', 'custom-blocks')} initialOpen={true}>
+                <PanelBody title={__('Icon Settings', 'adi26r')} initialOpen={true}>
                     <MediaUploadCheck>
                         <MediaUpload
                             onSelect={onSelectImage}
@@ -78,7 +78,7 @@ export default function Edit({ attributes, setAttributes }) {
                                     className="editor-media-placeholder__button"
                                     style={{ marginBottom: '8px', display: 'block' }}
                                 >
-                                    {imageId === 0 ? __('Select Icon Image', 'custom-blocks') : __('Replace Icon', 'custom-blocks')}
+                                    {imageId === 0 ? __('Select Icon Image', 'adi26r') : __('Replace Icon', 'adi26r')}
                                 </Button>
                             )}
                         />
@@ -91,12 +91,12 @@ export default function Edit({ attributes, setAttributes }) {
                             isDestructive
                             style={{ marginBottom: '16px', display: 'block' }}
                         >
-                            {__('Remove Icon', 'custom-blocks')}
+                            {__('Remove Icon', 'adi26r')}
                         </Button>
                     )}
                     
                     <RangeControl
-                        label={__('Icon Size (px)', 'custom-blocks')}
+                        label={__('Icon Size (px)', 'adi26r')}
                         value={imageSize}
                         onChange={(value) => setAttributes({ imageSize: value })}
                         min={16}
@@ -105,36 +105,36 @@ export default function Edit({ attributes, setAttributes }) {
                     />
                     
                     <SelectControl
-                        label={__('Alignment', 'custom-blocks')}
+                        label={__('Alignment', 'adi26r')}
                         value={alignment}
                         options={[
-                            { label: __('Left', 'custom-blocks'), value: 'flex-start' },
-                            { label: __('Center', 'custom-blocks'), value: 'center' },
-                            { label: __('Right', 'custom-blocks'), value: 'flex-end' },
+                            { label: __('Left', 'adi26r'), value: 'flex-start' },
+                            { label: __('Center', 'adi26r'), value: 'center' },
+                            { label: __('Right', 'adi26r'), value: 'flex-end' },
                         ]}
                         onChange={(value) => setAttributes({ alignment: value })}
                     />
                     
                     <SelectControl
-                        label={__('Layout', 'custom-blocks')}
+                        label={__('Layout', 'adi26r')}
                         value={layout}
                         options={[
-                            { label: __('Vertical (Icon above text)', 'custom-blocks'), value: 'vertical' },
-                            { label: __('Horizontal (Icon beside text)', 'custom-blocks'), value: 'horizontal' },
+                            { label: __('Vertical (Icon above text)', 'adi26r'), value: 'vertical' },
+                            { label: __('Horizontal (Icon beside text)', 'adi26r'), value: 'horizontal' },
                         ]}
                         onChange={(value) => setAttributes({ layout: value })}
                     />
 
                     <TextControl 
-                        label={__('icon Alt text','custom-blocks')}
+                        label={__('icon Alt text','adi26r')}
                         value={imageAlt}
                         onChange={(value) => setAttributes({ imageAlt: value })}
                     />
                 </PanelBody>
                 
-                <PanelBody title={__('Link Settings', 'custom-blocks')} initialOpen={true}>
+                <PanelBody title={__('Link Settings', 'adi26r')} initialOpen={true}>
                     <TextControl
-                        label={__('Link URL', 'custom-blocks')}
+                        label={__('Link URL', 'adi26r')}
                         value={linkUrl}
                         onChange={onChangeUrl}
                     />
@@ -144,7 +144,7 @@ export default function Edit({ attributes, setAttributes }) {
                     />
                     
                     <ToggleControl
-                        label={__('Open link in new tab', 'custom-blocks')}
+                        label={__('Open link in new tab', 'adi26r')}
                         checked={openInNewTab}
                         onChange={() => setAttributes({ openInNewTab: !openInNewTab })}
                     />
@@ -168,7 +168,7 @@ export default function Edit({ attributes, setAttributes }) {
                             width: `${imageSize}px`,
                             height: `${imageSize}px`
                         }}>
-                            <span>{__('Select Icon', 'custom-blocks')}</span>
+                            <span>{__('Select Icon', 'adi26r')}</span>
                         </div>
                     )}
                     
@@ -177,13 +177,13 @@ export default function Edit({ attributes, setAttributes }) {
                         className="icon-link-text"
                         value={linkText}
                         onChange={(content) => setAttributes({ linkText: content })}
-                        placeholder={__('Enter link text...', 'custom-blocks')}
+                        placeholder={__('Enter link text...', 'adi26r')}
                     />
                 </div>
                 
                 {!linkUrl && (
                     <p className="icon-link-notice">
-                        {__('Set a link URL in the block settings', 'custom-blocks')}
+                        {__('Set a link URL in the block settings', 'adi26r')}
                     </p>
                 )}
             </div>

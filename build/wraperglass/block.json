@@ -18,7 +18,7 @@
       "default": "full"
     }
   },
-  "textdomain": "wraperglass",
+  "textdomain": "adi26r",
   "editorScript": "file:./index.js",
   "editorStyle": "file:./index.css",
   "style": "file:./style-index.css",

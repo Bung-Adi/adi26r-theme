@@ -10,6 +10,21 @@
   <section class="entry-content">
     <?php the_content(); ?>
   </section>
+  <div class="content-tags">
+    <h2>Tags : </h2>
+    <?php
+      $tags = get_the_terms(get_the_ID(), 'post_tag');
+      if ( $tags && ! is_wp_error( $tags ) ) {
+          echo '<ul class="post-tags">';
+          foreach ( $tags as $tag ) {
+    ?>
+            <a href="<?php echo esc_url( get_tag_link( $tag ) ); ?>" rel="tag"><?php echo esc_html( $tag->name ); ?></a>
+    <?php
+          }
+          echo '</ul>';
+      }
+    ?>
+  </div>
   <!-- Related Posts Section -->
   <section class="related-posts">
     <h2><?php esc_html_e( 'Related Posts', 'adi26r' ); ?></h2>

@@ -63,7 +63,7 @@ return array(
 				'default' => ''
 			)
 		),
-		'textdomain' => 'customico',
+		'textdomain' => 'adi26r',
 		'editorScript' => 'file:./index.js',
 		'editorStyle' => 'file:./index.css',
 		'style' => 'file:./style-index.css',
@@ -92,7 +92,7 @@ return array(
 				'default' => 'full'
 			)
 		),
-		'textdomain' => 'customicowraper',
+		'textdomain' => 'adi26r',
 		'editorScript' => 'file:./index.js',
 		'editorStyle' => 'file:./index.css',
 		'style' => 'file:./style-index.css',
@@ -122,7 +122,7 @@ return array(
 				'default' => 'h1'
 			)
 		),
-		'textdomain' => 'headinghero',
+		'textdomain' => 'adi26r',
 		'editorScript' => 'file:./index.js',
 		'editorStyle' => 'file:./index.css',
 		'style' => 'file:./style-index.css'
@@ -189,7 +189,7 @@ return array(
 				'default' => 'please type the description'
 			)
 		),
-		'textdomain' => 'latestposts',
+		'textdomain' => 'adi26r',
 		'editorScript' => 'file:./index.js',
 		'editorStyle' => 'file:./index.css',
 		'style' => 'file:./style-index.css',
@@ -282,7 +282,7 @@ return array(
 				'default' => 'Archive Description'
 			)
 		),
-		'textdomain' => 'myarchive',
+		'textdomain' => 'adi26r',
 		'editorScript' => 'file:./index.js',
 		'editorStyle' => 'file:./index.css',
 		'style' => 'file:./style-index.css',
@@ -352,7 +352,7 @@ return array(
 				'default' => 'Archive Description'
 			)
 		),
-		'textdomain' => 'myarchiveconcept',
+		'textdomain' => 'adi26r',
 		'editorScript' => 'file:./index.js',
 		'editorStyle' => 'file:./index.css',
 		'style' => 'file:./style-index.css',
@@ -373,7 +373,7 @@ return array(
 		'supports' => array(
 			'html' => false
 		),
-		'textdomain' => 'myfooter',
+		'textdomain' => 'adi26r',
 		'editorScript' => 'file:./index.js',
 		'editorStyle' => 'file:./index.css',
 		'style' => 'file:./style-index.css',
@@ -395,7 +395,7 @@ return array(
 		'supports' => array(
 			'html' => false
 		),
-		'textdomain' => 'myheader',
+		'textdomain' => 'adi26r',
 		'editorScript' => 'file:./index.js',
 		'editorStyle' => 'file:./index.css',
 		'style' => 'file:./style-index.css',
@@ -434,7 +434,7 @@ return array(
 				'type' => 'string'
 			)
 		),
-		'textdomain' => 'myhero',
+		'textdomain' => 'adi26r',
 		'editorScript' => 'file:./index.js',
 		'editorStyle' => 'file:./index.css',
 		'style' => 'file:./style-index.css',
@@ -455,7 +455,7 @@ return array(
 		'supports' => array(
 			'html' => false
 		),
-		'textdomain' => 'mypage',
+		'textdomain' => 'adi26r',
 		'editorScript' => 'file:./index.js',
 		'editorStyle' => 'file:./index.css',
 		'style' => 'file:./style-index.css',
@@ -480,7 +480,7 @@ return array(
 				'full'
 			)
 		),
-		'textdomain' => 'mysingle',
+		'textdomain' => 'adi26r',
 		'editorScript' => 'file:./index.js',
 		'editorStyle' => 'file:./index.css',
 		'style' => 'file:./style-index.css',
@@ -530,7 +530,32 @@ return array(
 				'full'
 			)
 		),
-		'textdomain' => 'mysingleconcept',
+		'textdomain' => 'adi26r',
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./index.css',
+		'style' => 'file:./style-index.css',
+		'render' => 'file:./render.php'
+	),
+	'mytag' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'adi26r/mytag',
+		'version' => '0.1.0',
+		'title' => 'My Tag by Adi',
+		'category' => 'widgets',
+		'icon' => 'admin-post',
+		'description' => 'Tags archive page.',
+		'example' => array(
+			
+		),
+		'supports' => array(
+			'align' => array(
+				'wide',
+				'full'
+			),
+			'html' => false
+		),
+		'textdomain' => 'adi26r',
 		'editorScript' => 'file:./index.js',
 		'editorStyle' => 'file:./index.css',
 		'style' => 'file:./style-index.css',
@@ -558,7 +583,7 @@ return array(
 				'default' => 'full'
 			)
 		),
-		'textdomain' => 'wraperglass',
+		'textdomain' => 'adi26r',
 		'editorScript' => 'file:./index.js',
 		'editorStyle' => 'file:./index.css',
 		'style' => 'file:./style-index.css',

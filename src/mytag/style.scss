@@ -1,0 +1,41 @@
+@import '../assets/variables';
+
+.adi26r-mytag {
+	.archive-header {
+		@include glassmorph-w;
+		margin-bottom: 32px;
+    padding: 0 8px;
+		.archive-title {
+			color: $color-y;
+			margin-bottom: 8px;
+		}
+	}
+  .tag-archive-posts {
+		> h2 {
+			@include glassmorph-w;
+			padding: 8px;
+		}
+    > ul {
+      list-style: none;
+			margin: 0;
+			padding: 0;
+			columns: 300px;
+			> li {
+				width: 100%;
+				object-fit: contain;
+        margin-bottom: 16px;
+				a {
+					text-decoration: none;
+					color: $color-y;
+					> img {
+						width: 100%;
+						height: auto;
+					}
+				}
+			}
+    }
+  }
+  > section:nth-child(3) {
+    margin-top: 64px;
+  }
+}
