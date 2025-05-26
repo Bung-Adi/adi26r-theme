@@ -279,7 +279,7 @@ body {
   color: #E7E8E9;
 }
 .adi26r-main a {
-  color: #14e8ff;
+  color: #00EAFB;
   font-size: 14px;
 }
 @media (min-width: 992px) {
@@ -380,7 +380,7 @@ body {
   width: 15vw;
   height: 40px;
   cursor: pointer;
-  color: #14e8ff;
+  color: #00EAFB;
 }
 @media (min-width: 992px) {
   .search-overlay.search-overlay--active .search-overlay__top {
