@@ -187,6 +187,10 @@ return array(
 			'sectionDescription' => array(
 				'type' => 'string',
 				'default' => 'please type the description'
+			),
+			'sectionId' => array(
+				'type' => 'string',
+				'default' => 'latest-post'
 			)
 		),
 		'textdomain' => 'adi26r',

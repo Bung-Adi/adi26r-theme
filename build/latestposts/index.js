@@ -8,7 +8,7 @@
   \************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"adi26r/latestposts","version":"0.1.0","title":"Latest posts by Adi","category":"widgets","icon":"admin-post","description":"Display the latest posts from a selected post type.","example":{},"supports":{"html":false,"children":true},"attributes":{"postType":{"type":"string","default":"post"},"sectionTitle":{"type":"string","default":"please type the title"},"sectionDescription":{"type":"string","default":"please type the description"}},"textdomain":"adi26r","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"adi26r/latestposts","version":"0.1.0","title":"Latest posts by Adi","category":"widgets","icon":"admin-post","description":"Display the latest posts from a selected post type.","example":{},"supports":{"html":false,"children":true},"attributes":{"postType":{"type":"string","default":"post"},"sectionTitle":{"type":"string","default":"please type the title"},"sectionDescription":{"type":"string","default":"please type the description"},"sectionId":{"type":"string","default":"latest-post"}},"textdomain":"adi26r","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php"}');
 
 /***/ }),
 
@@ -44,7 +44,8 @@ function Edit({
   const {
     postType,
     sectionTitle,
-    sectionDescription
+    sectionDescription,
+    sectionId
   } = attributes;
   const [postTypeOptions, setPostTypeOptions] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_3__.useState)([]);
   (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_3__.useEffect)(() => {
@@ -82,6 +83,12 @@ function Edit({
           value: sectionDescription,
           onChange: value => setAttributes({
             sectionDescription: value
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Section ID', 'adi26r'),
+          value: sectionId,
+          onChange: value => setAttributes({
+            sectionId: value
           })
         })]
       })
@@ -153,6 +160,10 @@ __webpack_require__.r(__webpack_exports__);
     sectionDescription: {
       type: 'string',
       default: ''
+    },
+    sectionId: {
+      type: 'string',
+      default: 'latest-post'
     }
   },
   edit: _edit__WEBPACK_IMPORTED_MODULE_2__["default"],

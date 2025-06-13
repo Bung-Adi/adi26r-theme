@@ -10,7 +10,7 @@
   );
   $query = new WP_Query($args);
 ?>
-<section class="adi26r-latest-gallery" data-post-type="ai-art-gallery">
+<section class="adi26r-latest-gallery" id="latest-gallery" data-post-type="ai-art-gallery">
   <header class="latest-gallery-header">
     <h3 class="title"><?php echo $sectionTitle; ?></h3>
     <p class="description"><?php echo $sectionDescription; ?></p>

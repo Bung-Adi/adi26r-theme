@@ -4,7 +4,7 @@ import { PanelBody, SelectControl, TextControl } from '@wordpress/components';
 import { useEffect, useState } from '@wordpress/element';
 
 export default function Edit({ attributes, setAttributes }) {
-	const { postType, sectionTitle, sectionDescription } = attributes;
+	const { postType, sectionTitle, sectionDescription, sectionId } = attributes;
 	const [postTypeOptions, setPostTypeOptions] = useState([]);
 
 	useEffect(() => {
@@ -37,6 +37,11 @@ export default function Edit({ attributes, setAttributes }) {
 						label={__('Section Description', 'adi26r')}
 						value={sectionDescription}
 						onChange={(value) => setAttributes({ sectionDescription: value })}
+					/>
+					<TextControl
+						label={__('Section ID', 'adi26r')}
+						value={sectionId}
+						onChange={(value) => setAttributes({ sectionId: value })}
 					/>
 				</PanelBody>
 			</InspectorControls>

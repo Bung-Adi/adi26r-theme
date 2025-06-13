@@ -26,6 +26,10 @@ registerBlockType(metadata.name, {
 			type: 'string',
 			default: '',
 		},
+		sectionId: {
+			type: 'string',
+			default: 'latest-post',
+		},
 	},
 	edit: Edit,
 	save: () => null

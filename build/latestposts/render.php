@@ -2,6 +2,7 @@
 $postType = isset($attributes['postType']) ? $attributes['postType'] : 'post';
 $sectionTitle = isset($attributes['sectionTitle']) ? $attributes['sectionTitle'] : __('Latest Posts', 'adi26r');
 $sectionDescription = isset($attributes['sectionDescription']) ? $attributes['sectionDescription'] : __('Latest posts description.', 'adi26r');
+$sectionId = isset($attributes['sectionId']) ? $attributes['sectionId'] : 'latest-post';
 
 $args = [
     'post_type' => $postType,
@@ -9,7 +10,7 @@ $args = [
 ];
 $query = new WP_Query($args);
 ?>
-<section class="adi26r-latest-posts">
+<section class="adi26r-latest-posts" id="<?php echo esc_html($sectionId); ?>">
     <header class="latest-posts-header">
         <h3 class="title"><?php echo esc_html($sectionTitle); ?></h3>
         <p class="description"><?php echo esc_html($sectionDescription); ?></p>

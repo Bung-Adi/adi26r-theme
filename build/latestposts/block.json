@@ -24,6 +24,10 @@
     "sectionDescription": {
       "type": "string",
       "default": "please type the description"
+    },
+    "sectionId": {
+      "type": "string",
+      "default": "latest-post"
     }
   },
   "textdomain": "adi26r",
